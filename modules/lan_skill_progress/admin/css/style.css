@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------------
+# Module By http://www.themelan.com
+# ------------------------------------------------------------------------
+# Author    ThemeLan by http://www.themelan.com
+# Copyright (C) 2013 - 2014 http://www.themelan.com All Rights Reserved.
+# @license - GNU/GPL V2 for PHP files. CSS / JS are Copyrighted Commercial
+# Websites: http://www.themelan.com
+-------------------------------------------------------------------------*/
+.pane-sliders .panel { border: none !important; }
+div.panel > h3 { height: 40px!important;padding:0!important; background: #fff!important; border: 1px solid #ccc; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font: bold 12px/30px Arial, Helvetica, sans-serif}
+div.panel > h3 a { color: #333!important;line-height: 40px;text-transform:uppercase}
+div.panel h3.pane-toggler-down{ border-bottom:2px solid #45CCB6!important;}
+div.panel h3.pane-toggler-down a { color: #FC0303!important }
+.pane-sliders .content fieldset.panelform input { height: 20px; color: #555; line-height: 20px; padding: 4px 6px; border:1px solid #e0e0e0; box-shadow: 0 0 10px #eee inset; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.pane-sliders .content fieldset.panelform select { height: 26px; color: #555; line-height: 24px; padding: 2px; font-size:11px; border:1px solid #e0e0e0; box-shadow: 0 0 10px #eee inset!important; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+.pane-sliders .content fieldset.panelform select[multiple=multiple] { height: auto!important}
+.fltrt ul.adminformlist li { overflow: hidden; border-bottom: 1px solid #eee; padding: 0 10px; margin: 0}
+div .panel input[type=radio]{margin-top:9px!important}
+.pane-sliders .content .button2-left{margin-top:8px}
+.pane-sliders .content {margin: 4px auto;width: 99%;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;}
+.fltrt ul.adminformlist li{border-bottom:none !important}

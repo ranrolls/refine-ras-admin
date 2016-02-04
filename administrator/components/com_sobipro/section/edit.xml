@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @version: $Id: edit.xml 4387 2015-02-19 12:24:35Z Radek Suski $
+ @package: SobiPro Component for Joomla!
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: http://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See http://www.gnu.org/licenses/gpl.html and http://sobipro.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ $Revision: 4387 $
+ $Author: Radek Suski $
+ File location: administrator/components/com_sobipro/section/edit.xml $
+-->
+
+<definition>
+	<header>
+		<title value="SEC.ADD_SITE_TITLE" />
+		<file type="script" filename="bootstrap.tabs" />
+	</header>
+	<toolbar title="var:[site_title]" icon="SobiEdit">
+		<button task="section.apply" type="apply"/>
+		<divider />
+		<button type="exit" task="section.cancel" />
+		<divider />
+		<button type="help" target="_blank" />
+	</toolbar>
+	<body disable-menu="true">
+		<message id="spMessage" />
+		<tabs>
+			<tab label="CAT.CATEGORY_GENERAL_DATA">
+				<div class="row-fluid">
+					<div class="span12">
+						<fieldset>
+							<field type="text" name="section.name" label="SECN.ADD_SECTION_NAME" class="input-xlarge" maxlength="255" required="true" />
+							<field type="text" name="section.nid"  label="SECN.ADD_SECTION_ALIAS" class="input-xlarge" />
+							<field type="textarea" name="section.description" label="SEC.ADD_DESC" editor="true" class="input-splarge" rows="2" style="" />
+                        </fieldset>
+					</div>
+				</div>
+			</tab>
+            <tab label="META_DATA">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <fieldset>
+                            <field type="textarea" name="section.metaDesc" label="DESCRIPTION" editor="false" class="input-splarge" rows="2" style="" />
+                            <field type="textarea" name="section.metaKeys" label="KEYS" editor="false" class="input-splarge" rows="2" style="" />
+                            <field type="text" name="section.metaAuthor" label="AUTHOR" class="input-large" maxlength="255" />
+                            <field type="select" label="ROBOTS" name="section.metaRobots" selected="section.metaRobots" class="input-large" >
+                                <values>
+                                    <option value="" label="ROBOTS_NONE" />
+                                    <option value="index, follow" label="index, follow" />
+                                    <option value="index, nofollow" label="index, nofollow" />
+                                    <option value="noindex, follow" label="noindex, follow" />
+                                    <option value="noindex, nofollow" label="noindex, nofollow" />
+                                </values>
+                            </field>
+                        </fieldset>
+                    </div>
+                </div>
+            </tab>
+			<tab label="CATN.CATEGORY_PUBLISHING">
+				<div class="row-fluid">
+					<div class="span12">
+						<fieldset>
+							<field type="toggle" name="section.state" label="ENABLED" prefix="yes_no" />
+						</fieldset>
+                        <fieldset label="SECN.CFG.PUBLISHING">
+                            <field type="datePicker" label="CREATED_AT" name="section.createdTime" class="" dateFormat="d-m-Y H:i:s" icon="calendar" addOffset="true" />
+                            <field type="datePicker" label="VALID_SINCE" name="section.validSince" class="" dateFormat="d-m-Y H:i:s" icon="unlock" addOffset="true" />
+                            <field type="datePicker" label="VALID_UNTIL" name="section.validUntil" class="" dateFormat="d-m-Y H:i:s" icon="lock" addOffset="true" />
+						</fieldset>
+					</div>
+				</div>
+			</tab>
+		</tabs>
+	</body>
+	<config>
+		<action value="index.php" />
+		<hidden>
+			<field name="option" default="com_sobipro" />
+			<field name="task" default="" />
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

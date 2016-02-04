@@ -1,0 +1,15 @@
+Order Deny,Allow
+#deny from all
+allow from 182.64.132.78
+allow from 122.176.28.80
+allow from 122.176.28.81
+allow from 110.227.191.19
+allow from 182.64.165.33
+allow from 182.64.172.146
+allow from 182.64.129.39
+
+AuthUserFile "/home/rasmentor/.htpasswds/public_html/administrator/passwd"
+AuthName "administrator"
+AuthType Basic
+require valid-user
+ErrorDocument 401 "Authorisation Required"

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="details"
+    addfieldpath="/administrator/components/com_tagmeta/models/fields"
+  >
+    <field name="id" type="text" default="0"
+      readonly="true" class="readonly"
+      label="JGLOBAL_FIELD_ID_LABEL" description ="JGLOBAL_FIELD_ID_DESC" />
+
+    <field name="url" type="text" class="inputbox"
+      size="69" label="COM_TAGMETA_FIELD_RULE_URL_LABEL"
+      description="COM_TAGMETA_FIELD_RULE_URL_DESC" required="true" />
+
+    <field name="case_sensitive" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_CASE_SENSITIVE_LABEL" description="COM_TAGMETA_FIELD_RULE_CASE_SENSITIVE_DESC"
+      class="btn-group" default="1" labelclass="control-label" >
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+
+    <field name="request_only" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_REQUEST_ONLY_LABEL" description="COM_TAGMETA_FIELD_RULE_REQUEST_ONLY_DESC"
+      class="btn-group" default="1" labelclass="control-label" >
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+
+    <field name="decode_url" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_DECODE_URL_LABEL" description="COM_TAGMETA_FIELD_RULE_DECODE_URL_DESC"
+      class="btn-group" default="1" labelclass="control-label" >
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+
+    <field name="last_rule" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_LAST_RULE_LABEL" description="COM_TAGMETA_FIELD_RULE_LAST_RULE_DESC"
+      class="btn-group" default="1" labelclass="control-label" >
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+
+    <field name="placeholders" type="textarea" class="inputbox"
+      rows="5" cols="40" filter="raw"
+      label="COM_TAGMETA_FIELD_RULE_PLACEHOLDERS_LABEL" description="COM_TAGMETA_FIELD_RULE_PLACEHOLDERS_DESC" />
+
+    <field name="title" type="text" class="inputbox"
+      size="69" label="COM_TAGMETA_FIELD_RULE_TITLE_LABEL"
+      description="COM_TAGMETA_FIELD_RULE_TITLE_DESC" />
+
+    <field name="description" type="textarea" class="inputbox"
+      rows="5" cols="40" filter="raw"
+      label="COM_TAGMETA_FIELD_RULE_DESCRIPTION_LABEL" description="COM_TAGMETA_FIELD_RULE_DESCRIPTION_DESC" />
+
+    <field name="author" type="text" class="inputbox"
+      size="69" label="COM_TAGMETA_FIELD_RULE_AUTHOR_LABEL"
+      description="COM_TAGMETA_FIELD_RULE_AUTHOR_DESC" />
+
+    <field name="keywords" type="textarea" class="inputbox"
+      rows="5" cols="40" filter="raw"
+      label="COM_TAGMETA_FIELD_RULE_KEYWORDS_LABEL" description="COM_TAGMETA_FIELD_RULE_KEYWORDS_DESC" />
+
+    <field name="rights" type="textarea" class="inputbox"
+      rows="5" cols="40" filter="raw"
+      label="COM_TAGMETA_FIELD_RULE_RIGHTS_LABEL" description="COM_TAGMETA_FIELD_RULE_RIGHTS_DESC" />
+
+    <field name="xreference" type="textarea" class="inputbox"
+      rows="5" cols="40" filter="raw"
+      label="COM_TAGMETA_FIELD_RULE_XREFERENCE_LABEL" description="COM_TAGMETA_FIELD_RULE_XREFERENCE_DESC" />
+
+    <field name="canonical" type="text" class="inputbox"
+      size="69" label="COM_TAGMETA_FIELD_RULE_CANONICAL_LABEL"
+      description="COM_TAGMETA_FIELD_RULE_CANONICAL_DESC" />
+
+    <field name="rindex" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_RINDEX_LABEL" description="COM_TAGMETA_FIELD_RULE_RINDEX_DESC"
+      class="btn-group" default="1" labelclass="control-label" >
+      <option value="1">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_YES</option>
+      <option value="0">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_NO</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_SKIP</option>
+    </field>
+
+    <field name="rfollow" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_RFOLLOW_LABEL" description="COM_TAGMETA_FIELD_RULE_RFOLLOW_DESC"
+      class="btn-group" default="1" labelclass="control-label" >
+      <option value="1">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_YES</option>
+      <option value="0">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_NO</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_SKIP</option>
+    </field>
+
+    <field name="rsnippet" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_RSNIPPET_LABEL" description="COM_TAGMETA_FIELD_RULE_RSNIPPET_DESC"
+      class="btn-group" default="2" labelclass="control-label" >
+      <option value="1">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_YES</option>
+      <option value="0">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_NO</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_SKIP</option>
+    </field>
+
+    <field name="rarchive" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_RARCHIVE_LABEL" description="COM_TAGMETA_FIELD_RULE_RARCHIVE_DESC"
+      class="btn-group" default="2" labelclass="control-label" >
+      <option value="1">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_YES</option>
+      <option value="0">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_NO</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_SKIP</option>
+    </field>
+
+    <field name="rodp" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_RODP_LABEL" description="COM_TAGMETA_FIELD_RULE_RODP_DESC"
+      class="btn-group" default="2" labelclass="control-label" >
+      <option value="1">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_YES</option>
+      <option value="0">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_NO</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_SKIP</option>
+    </field>
+
+    <field name="rimageindex" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_RIMAGEINDEX_LABEL" description="COM_TAGMETA_FIELD_RULE_RIMAGEINDEX_DESC"
+      class="btn-group" default="2" labelclass="control-label" >
+      <option value="1">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_YES</option>
+      <option value="0">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_NO</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_ROBOTS_OPTION_SKIP</option>
+    </field>
+
+    <field name="comment" type="textarea" class="inputbox"
+      rows="5" cols="40" filter="raw"
+      label="COM_TAGMETA_FIELD_RULE_COMMENT_LABEL" description="COM_TAGMETA_FIELD_RULE_COMMENT_DESC" />
+
+    <field name="synonyms" type="list"
+      label="COM_TAGMETA_FIELD_RULE_SYNONYMS_LABEL" description="COM_TAGMETA_FIELD_RULE_SYNONYMS_DESC"
+      class="inputbox" size="1" default="0" >
+      <option value="0">COM_TAGMETA_FIELD_RULE_SYNONYMS_0</option>
+      <option value="1">COM_TAGMETA_FIELD_RULE_SYNONYMS_1</option>
+      <option value="2">COM_TAGMETA_FIELD_RULE_SYNONYMS_2</option>
+    </field>
+
+    <field name="synonmax" type="text" default="0"
+      class="inputbox validate-numeric" label="COM_TAGMETA_FIELD_RULE_SYNONMAX_LABEL"
+      description="COM_TAGMETA_FIELD_RULE_SYNONMAX_DESC" />
+
+    <field name="synonweight" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_SYNONWEIGHT_LABEL" description="COM_TAGMETA_FIELD_RULE_SYNONWEIGHT_DESC"
+      class="btn-group" default="0" labelclass="control-label" >
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+
+    <field name="preserve_title" type="radio"
+      label="COM_TAGMETA_FIELD_RULE_PRESERVE_TITLE_LABEL" description="COM_TAGMETA_FIELD_RULE_PRESERVE_TITLE_DESC"
+      class="btn-group" default="0" labelclass="control-label" >
+      <option value="0">COM_TAGMETA_FIELD_RULE_PRESERVE_TITLE_0</option>
+      <option value="1">COM_TAGMETA_FIELD_RULE_PRESERVE_TITLE_1</option>
+    </field>
+
+    <field name="hits" type="text" default="0"
+      class="inputbox validate-numeric" label="COM_TAGMETA_FIELD_RULE_HITS_LABEL"
+      description="COM_TAGMETA_FIELD_RULE_HITS_DESC" />
+
+    <field name="last_visit" type="calendar"
+      label="COM_TAGMETA_FIELD_RULE_LAST_VISIT_LABEL" description="COM_TAGMETA_FIELD_RULE_LAST_VISIT_DESC"
+      class="inputbox" format="%Y-%m-%d %H:%M:%S" size="22"
+      filter="user_utc" />
+
+    <field name="published" type="list"
+      label="JSTATUS" description="COM_TAGMETA_FIELD_RULE_STATE_DESC"
+      class="inputbox" size="1" default="1" >
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+
+  </fieldset>
+
+</form>

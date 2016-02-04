@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <item name="dashboard"
+          link="index.php?option=com_judirectory&amp;view=dashboard"
+          label="COM_JUDIRECTORY_SUBMENU_DASHBOARD"
+          icon="&lt;i class='icon-dashboard'&gt;&lt;/i&gt;"/>
+    <item name="listcats"
+          link="index.php?option=com_judirectory&amp;view=listcats"
+          label="COM_JUDIRECTORY_SUBMENU_LISTCATS"
+          icon="&lt;i class='icon-tree-2'&gt;&lt;/i&gt;">
+        <item name="listing.add"
+              link="index.php?option=com_judirectory&amp;task=listing.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_LISTING"/>
+        <item name="category.add"
+              link="index.php?option=com_judirectory&amp;task=category.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_CATEGORY"/>
+        <item name="pendinglistings"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=pendinglistings"
+              label="COM_JUDIRECTORY_SUBMENU_PENDING_LISTINGS"/>
+    </item>
+    <item name="fields"
+          link="index.php?option=com_judirectory&amp;view=fields"
+          label="COM_JUDIRECTORY_SUBMENU_FIELDS"
+          icon="&lt;i class='icon-menu-3'&gt;&lt;/i&gt;">
+        <item name="field"
+              link="index.php?option=com_judirectory&amp;task=field.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_FIELD"/>
+        <item name="fieldgroups"
+              link="index.php?option=com_judirectory&amp;view=fieldgroups"
+              label="COM_JUDIRECTORY_SUBMENU_FIELD_GROUPS"/>
+        <item name="fieldgroup.add"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;task=fieldgroup.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_FIELD_GROUP"/>
+    </item>
+    <item name="criterias"
+          link="index.php?option=com_judirectory&amp;view=criterias"
+          label="COM_JUDIRECTORY_SUBMENU_CRITERIAS"
+          icon="&lt;i class='icon-star-2'&gt;&lt;/i&gt;">
+        <item name="criteria.add"
+              link="index.php?option=com_judirectory&amp;task=criteria.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_CRITERIA"/>
+        <item name="criteriagroups"
+              link="index.php?option=com_judirectory&amp;view=criteriagroups"
+              label="COM_JUDIRECTORY_SUBMENU_CRITERIAGROUPS"/>
+        <item name="criteriagroup.add"
+              link="index.php?option=com_judirectory&amp;task=criteriagroup.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_CRITERIA_GROUP"/>
+    </item>
+    <item name="comments"
+          link="index.php?option=com_judirectory&amp;view=comments"
+          label="COM_JUDIRECTORY_SUBMENU_COMMENTS"
+          icon="&lt;i class='icon-comments-2'&gt;&lt;/i&gt;">
+        <item name="comment.add"
+              link="index.php?option=com_judirectory&amp;task=comment.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_COMMENT"/>
+        <item name="pendingcomments"
+              link="index.php?option=com_judirectory&amp;view=pendingcomments"
+              label="COM_JUDIRECTORY_SUBMENU_PENDING_COMMENTS"/>
+    </item>
+    <item name="emails"
+          proversion="true"
+          link="index.php?option=com_judirectory&amp;view=emails"
+          label="COM_JUDIRECTORY_SUBMENU_EMAILS"
+          icon="&lt;i class='icon-mail'&gt;&lt;/i&gt;">
+        <item name="email.add"
+              link="index.php?option=com_judirectory&amp;task=email.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_EMAIL"/>
+        <item name="mailqs"
+              link="index.php?option=com_judirectory&amp;view=mailqs"
+              label="COM_JUDIRECTORY_SUBMENU_MAIL_QUEUE"/>
+    </item>
+    <item name="claims"
+          proversion="true"
+          link="index.php?option=com_judirectory&amp;view=claims"
+          label="COM_JUDIRECTORY_SUBMENU_CLAIMS"
+          icon="&lt;i class='icon-flag'&gt;&lt;/i&gt;"/>
+    <item name="reports"
+          proversion="true"
+          link="index.php?option=com_judirectory&amp;view=reports"
+          label="COM_JUDIRECTORY_SUBMENU_REPORTS"
+          icon="&lt;i class='icon-warning-2'&gt;&lt;/i&gt;"/>
+    <item name="logs"
+          proversion="true"
+          link="index.php?option=com_judirectory&amp;view=logs"
+          label="COM_JUDIRECTORY_SUBMENU_LOGS"
+          icon="&lt;i class='icon-signup'&gt;&lt;/i&gt;">
+        <item name="clones"
+              link="index.php?option=com_judirectory&amp;view=clones"
+              label="COM_JUDIRECTORY_SUBMENU_CLONES"/>
+    </item>
+    <item name="plugins"
+          link="index.php?option=com_judirectory&amp;view=plugins"
+          label="COM_JUDIRECTORY_SUBMENU_PLUGINS"
+          icon="&lt;i class='icon-puzzle'&gt;&lt;/i&gt;">
+        <item name="plugin.add"
+              link="index.php?option=com_judirectory&amp;task=plugin.add"
+              label="COM_JUDIRECTORY_SUBMENU_INSTALL_PLUGIN"/>
+    </item>
+    <item name="styles"
+          link="index.php?option=com_judirectory&amp;view=styles"
+          label="COM_JUDIRECTORY_SUBMENU_TEMPLATE_STYLES"
+          icon="&lt;i class='icon-palette'&gt;&lt;/i&gt;">
+        <item name="style.add"
+              link="index.php?option=com_judirectory&amp;task=style.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_TEMPLATE_STYLE"/>
+        <item name="templates"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=templates"
+              label="COM_JUDIRECTORY_SUBMENU_TEMPLATES"/>
+        <item name="template.add"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;task=template.add"
+              label="COM_JUDIRECTORY_SUBMENU_ADD_TEMPLATE"/>
+    </item>
+    <item name="manager-more"
+          link="#"
+          label="COM_JUDIRECTORY_SUBMENU_MORE"
+          icon="&lt;i class='icon-forward-circle'&gt;&lt;/i&gt;">
+        <item name="languages"
+              link="index.php?option=com_judirectory&amp;view=languages"
+              label="COM_JUDIRECTORY_SUBMENU_LANGUAGES"
+              icon="&lt;i class='icon-book'&gt;&lt;/i&gt;"/>
+        <item name="collections"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=collections"
+              label="COM_JUDIRECTORY_SUBMENU_COLLECTIONS"
+              icon="&lt;i class='icon-archive'&gt;&lt;/i&gt;"/>
+        <item name="tags"
+              link="index.php?option=com_judirectory&amp;view=tags"
+              label="COM_JUDIRECTORY_SUBMENU_TAGS"
+              icon="&lt;i class='icon-tag-2'&gt;&lt;/i&gt;"/>
+        <item name="customlists"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=customlists"
+              label="COM_JUDIRECTORY_SUBMENU_CUSTOM_LISTS"
+              icon="&lt;i class='icon-wand'&gt;&lt;/i&gt;"/>
+        <item name="subscriptions"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=subscriptions"
+              label="COM_JUDIRECTORY_SUBMENU_SUBSCRIPTIONS"
+              icon="&lt;i class='icon-bookmark'&gt;&lt;/i&gt;"/>
+        <item name="users"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=users"
+              label="COM_JUDIRECTORY_SUBMENU_USERS"
+              icon="&lt;i class='icon-users'&gt;&lt;/i&gt;"/>
+        <item name="moderators"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=moderators"
+              label="COM_JUDIRECTORY_SUBMENU_MODERATORS"
+              icon="&lt;i class='icon-user'&gt;&lt;/i&gt;"/>
+        <item name="addresses"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=addresses"
+              label="COM_JUDIRECTORY_SUBMENU_ADDRESSES"
+              icon="&lt;i class='icon-location'&gt;&lt;/i&gt;"/>
+        <item name="csvprocess"
+              link="index.php?option=com_judirectory&amp;view=csvprocess"
+              label="COM_JUDIRECTORY_SUBMENU_CSV"
+              icon="&lt;i class='icon-file-2'&gt;&lt;/i&gt;"/>
+        <item name="backendpermission"
+              proversion="true"
+              link="index.php?option=com_judirectory&amp;view=backendpermission"
+              label="COM_JUDIRECTORY_SUBMENU_BACKENDPERMISSION"
+              icon="&lt;i class='icon-shield'&gt;&lt;/i&gt;"/>
+        <item name="globalconfig"
+              link="index.php?option=com_judirectory&amp;view=globalconfig"
+              label="COM_JUDIRECTORY_SUBMENU_GLOBALCONFIG"
+              icon="&lt;i class='icon-options'&gt;&lt;/i&gt;"/>
+        <item name="tools"
+              link="index.php?option=com_judirectory&amp;view=tools"
+              label="COM_JUDIRECTORY_SUBMENU_TOOLS"
+              icon="&lt;i class='icon-wrench'&gt;&lt;/i&gt;"/>
+    </item>
+</menu>

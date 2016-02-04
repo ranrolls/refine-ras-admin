@@ -1,0 +1,38 @@
+.judir-alpha-list {
+	text-align    : center;
+}
+
+.judir-alpha-list a {
+
+	padding :0px 6px  !important;
+}
+
+.judir-alpha-list ul li {
+	display : inline;
+    border: 0 !important;
+}
+
+.judir-category-list {
+	width    : 100%;
+	overflow : hidden;
+	margin   : 20px 0 0;
+}
+
+.judir-category-list ul {
+	width            : 100%;
+	float            : left;
+	margin           : 0;
+}
+
+.judir-category-list li {
+	width            : 25%;
+	float            : left;
+	display          : block;
+	margin           : 0;
+}
+
+.judir-category-list ul li a {
+	display         : inline-block;
+	text-align      : center;
+	padding         : 5px;
+}

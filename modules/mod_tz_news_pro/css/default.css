@@ -1,0 +1,78 @@
+.tz_image {
+    width: 25%;
+}
+h6.tz_title.blue_text{ margin:0px;}
+.tz_image img {    width: 100%;  float: left;    margin-top: 5px; border:1px solid #ecebeb;    padding-right: 32px;}
+
+.mod_tz_news { margin-top: -30px;
+    text-align: left;
+    float: none ! important;
+}
+
+.tz_description { color:#7c7b71;
+    display: block;
+    font-size: 13px;
+}
+
+.tz_description p {
+    margin-top: 0;
+}
+
+.tz_readmore a {
+    text-decoration: none;
+    display: inline-block;
+    color: #e10000; font-size:14px;
+}
+.tz_readmore a:hover {
+    color: #2a4c75;
+}
+
+.tz_date, .tz_hits, .tz_author, .tz_category {
+    font-style: italic;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+/*
+.tz_item_default {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+}*/
+li.tz_item_default { list-style:none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+padding-bottom: 20px;
+    padding-top: 0;
+}
+.tz_item_default:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tz_quote,
+.tz_link{
+    padding-top: 30px;
+}
+.tz_title {
+    padding: 30px 0;
+}
+
+.tz_title a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a4c75;
+    text-decoration: none;
+}
+
+ul.tz_news {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.dv1 {
+    display: block;
+}
+
+.dv2 {
+    clear: both;
+    display: block;
+    padding-top: 30px;
+}
+article.item.item-page .sp-module { margin-top:0px !important;}

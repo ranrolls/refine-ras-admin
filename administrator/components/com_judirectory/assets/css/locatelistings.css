@@ -1,0 +1,19 @@
+.editform span{
+	float: left;
+	width : 100%;
+}
+.editform span label{
+	float: left;
+	width : 100px;
+}
+.editform span:last-child{
+	margin-top: 10px;
+}
+
+.alert-info td{
+	background-color: #d9edf7 !important;
+}
+
+.address-path{
+	width: auto;
+}

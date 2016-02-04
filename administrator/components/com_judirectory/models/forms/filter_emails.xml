@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="COM_JUDIRECTORY_FILTER_SEARCH_DESC"
+                hint="JSEARCH_FILTER"
+                />
+
+        <field
+                name="category_id"
+                type="filter_catlv1"
+                label="COM_JUDIRECTORY_FILTER_CATEGORY"
+                extension="com_content"
+                description="COM_JUDIRECTORY_FILTER_CATEGORY_DESC"
+                onchange="this.form.submit();"
+                >
+            <option value="">COM_JUDIRECTORY_SELECT_CATEGORY</option>
+        </field>
+
+        <field
+                name="event"
+                type="list"
+                label="COM_JUDIRECTORY_FILTER_EVENT"
+                description="COM_JUDIRECTORY_FILTER_EVENT_DESC"
+                onchange="this.form.submit();"
+                >
+            <option value="">COM_JUDIRECTORY_SELECT_EVENT</option>
+            <option value="listing.create">COM_JUDIRECTORY_EVENT_LISTING_CREATE</option>
+            <option value="listing.approve_submit">COM_JUDIRECTORY_EVENT_LISTING_APPROVE_SUBMIT</option>
+            <option value="listing.approve_edit">COM_JUDIRECTORY_EVENT_LISTING_APPROVE_EDIT</option>
+            <option value="listing.reject">COM_JUDIRECTORY_EVENT_LISTING_REJECT</option>
+            <option value="listing.editstate">COM_JUDIRECTORY_EVENT_LISTING_EDITSTATE</option>
+            <option value="listing.edit">COM_JUDIRECTORY_EVENT_LISTING_EDIT</option>
+            <option value="listing.update">COM_JUDIRECTORY_EVENT_LISTING_UPDATE</option>
+            <option value="listing.delete">COM_JUDIRECTORY_EVENT_LISTING_DELETE</option>
+            <option value="listing.contact">COM_JUDIRECTORY_EVENT_LISTING_CONTACT</option>
+            <option value="listing.contactcopy">COM_JUDIRECTORY_EVENT_LISTING_CONTACT_COPY</option>
+            <option value="listing.sendtofriend">COM_JUDIRECTORY_EVENT_LISTING_SENT_TO_FRIEND</option>
+            <option value="listing.report">COM_JUDIRECTORY_EVENT_LISTING_REPORT</option>
+            <option value="comment.create">COM_JUDIRECTORY_EVENT_COMMENT_CREATE</option>
+            <option value="comment.approve">COM_JUDIRECTORY_EVENT_COMMENT_APPROVE</option>
+            <option value="comment.reject">COM_JUDIRECTORY_EVENT_COMMENT_REJECT</option>
+            <option value="comment.reply">COM_JUDIRECTORY_EVENT_COMMENT_REPLY</option>
+            <option value="comment.editstate">COM_JUDIRECTORY_EVENT_COMMENT_EDITSTATE</option>
+            <option value="comment.userdelete">COM_JUDIRECTORY_EVENT_COMMENT_USER_DELETE</option>
+            <option value="comment.moddelete">COM_JUDIRECTORY_EVENT_COMMENT_MOD_DELETE</option>
+            <option value="comment.subscribe">COM_JUDIRECTORY_EVENT_COMMENT_SUBSCRIBE</option>
+            <option value="comment.report">COM_JUDIRECTORY_EVENT_COMMENT_REPORT</option>
+            <option value="noticedemail.fulltmpdir">COM_JUDIRECTORY_EVENT_FULL_TMP_DIR</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="list"
+                label="COM_JUDIRECTORY_LIST_FULL_ORDERING"
+                description="COM_JUDIRECTORY_LIST_FULL_ORDERING_DESC"
+                onchange="this.form.submit();"
+                default="e.event ASC"
+                >
+            <option value="">COM_JUDIRECTORY_SORT_BY</option>
+            <option value="e.id ASC">COM_JUDIRECTORY_SORT_BY_ID_ASC</option>
+            <option value="e.id DESC">COM_JUDIRECTORY_SORT_BY_ID_DESC</option>
+            <option value="e.subject ASC">COM_JUDIRECTORY_SORT_BY_SUBJECT_ASC</option>
+            <option value="e.subject DESC">COM_JUDIRECTORY_SORT_BY_SUBJECT_DESC</option>
+            <option value="e.event ASC">COM_JUDIRECTORY_SORT_BY_EVENT_ASC</option>
+            <option value="e.event DESC">COM_JUDIRECTORY_SORT_BY_EVENT_DESC</option>
+            <option value="e.from ASC">COM_JUDIRECTORY_SORT_BY_FROM_ASC</option>
+            <option value="e.from DESC">COM_JUDIRECTORY_SORT_BY_FROM_DESC</option>
+            <option value="e.recipients ASC">COM_JUDIRECTORY_SORT_BY_RECIPIENTS_ASC</option>
+            <option value="e.recipients DESC">COM_JUDIRECTORY_SORT_BY_RECIPIENTS_DESC</option>
+            <option value="e.mode ASC">COM_JUDIRECTORY_SORT_BY_MODE_ASC</option>
+            <option value="e.mode DESC">COM_JUDIRECTORY_SORT_BY_MODE_DESC</option>
+            <option value="e.ordering ASC">COM_JUDIRECTORY_SORT_BY_ORDERING_ASC</option>
+            <option value="e.ordering DESC">COM_JUDIRECTORY_SORT_BY_ORDERING_DESC</option>
+            <option value="e.published ASC">COM_JUDIRECTORY_SORT_BY_STATE_ASC</option>
+            <option value="e.published ASC">COM_JUDIRECTORY_SORT_BY_STATE_ASC</option>
+            <option value="e.language ASC">COM_JUDIRECTORY_SORT_BY_LANGUAGE_ASC</option>
+            <option value="e.language DESC">COM_JUDIRECTORY_SORT_BY_LANGUAGE_DESC</option>
+        </field>
+
+        <field
+                name="limit"
+                type="limitbox"
+                class="inputbox input-mini"
+                default="25"
+                label="COM_JUDIRECTORY_LIST_LIMIT"
+                description="COM_JUDIRECTORY_LIST_LIMIT_DESC"
+                onchange="this.form.submit();"
+                />
+    </fields>
+</form>

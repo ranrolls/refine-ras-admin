@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>GSearch</name>
+	<author>2GLux.com</author>
+	<creationDate>May 2008</creationDate>
+	<copyright>Copyright (C) 2008 - 2013 2GLux.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+	 <authorEmail>info@2glux.com</authorEmail>
+	<authorUrl>http://2glux.com</authorUrl>
+	<version>3.0.1</version>
+	<description>Google Search</description>
+	<files>
+		<filename module="mod_gsearch">mod_gsearch.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/gsearch.gif</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="logo" type="text" default="images/joomla_logo_black.jpg" label="Your Logo" description="Your site's logo" />
+				<field name="button" type="text" default="modules/mod_gsearch/tmpl/gsearch.gif" label="Search Button" description="Search Button" />
+				<field name="client_id" type="text" default="pub-2914600261958472" label="Google Client Id" description="Your client id provided Google" />
+			
+				<field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

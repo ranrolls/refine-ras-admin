@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6" method="upgrade">
+	<name>Latest_blog_list</name>
+	<creationDate>2015-04-17</creationDate>
+	<author></author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright (C) 2015  Open Source Matters. All rights reserved.</copyright>	
+	<license></license>
+	<version>1.0</version>
+	<description>For Latest 5 blog display on home page.</description>
+	<files>
+		<filename module="mod_latest_blog_list">mod_latest_blog_list.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_latest_blog_list.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_latest_blog_list.ini</language>
+    	<language tag="de-DE">language/de-DE.mod_latest_blog_list.ini</language>            
+	</languages>
+	<params>
+		<param name="classname" type="text" default="" label="Class Name" description="Class Name Description" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="classname" type="text" default="" label="Class Name" description="Class Name Description" />
+			</fieldset>
+		</fields>
+	</config>			
+</extension>

@@ -1,0 +1,90 @@
+/**
+ * @version: $Id: default.less 4387 2015-02-19 12:24:35Z Radek Suski $
+ * @package: SobiPro Component for Joomla!
+
+ * @author
+ * Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ * Email: sobi[at]sigsiu.net
+ * Url: http://www.Sigsiu.NET
+
+ * @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ * @license GNU/GPL Version 3
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ * as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ * See http://www.gnu.org/licenses/gpl.html and http://sobipro.sigsiu.net/licenses.
+
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ * $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ * $Revision: 4387 $
+ * $Author: Radek Suski $
+ */
+
+/* to override dominant Joomla template styles (e.g. Beez) for SobiPro in Joomla 2.5
+  can be removed if a template is used that does not interfere in SobiPro styling using CSS id */
+#SobiPro ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#SobiPro .topmenu a:hover,
+#SobiPro .topmenu a:active,
+#SobiPro .topmenu a:focus {
+  background: inherit;
+  color: inherit;
+}
+#SobiPro .pagination li {
+  padding: inherit;
+  margin: inherit;
+}
+#SobiPro .pagination {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+#SobiPro .btn.dropdown-toggle {
+  background-color: #E6E6E6;
+}
+#SobiPro h1 {
+  border-bottom: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: inherit;
+  line-height: 40px;
+  margin: inherit;
+  padding: inherit;
+  padding-left: 0px;
+}
+#SobiPro h3 {
+  margin: inherit;
+}
+/* end Joomla! 2.5 template compatibility */
+/* General Styling */
+.SPDetailEntry h1 {
+  font-size: 28px;
+}
+.SPDetailEntry {
+  padding: 10px;
+}
+.SPDetailEntry .spManage {
+  margin-right: 10px;
+  margin-top: 17px;
+}
+/* Individual Styling, please adapt if you change field names */
+.field_country,
+.field_fax,
+.field_website,
+.field_business_days {
+  padding-bottom: 10px;
+}
+.entry-status {
+  font-size: 15px;
+  color: #a90000;
+  padding: 5px;
+}
+.popover {
+  font-size: 13px;
+  line-height: 13px;
+}

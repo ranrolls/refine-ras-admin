@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system">
+	<name>plg_system_tjsetgeneratortag</name>
+	<version>1.0.0</version>
+	<creationDate>February 2014</creationDate>
+	<author>ToolJoom</author>
+	<authorEmail>contact@tooljoom.com</authorEmail>
+	<authorUrl>http://www.tooljoom.com/</authorUrl>
+	<copyright>(C) 2014 ToolJoom</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description>PLG_TJSETGENERATORTAG_XML_DESCRIPTION</description>
+
+	<files>
+		<filename>index.html</filename>
+		<filename plugin="tjsetgeneratortag">tjsetgeneratortag.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_tjsetgeneratortag.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_tjsetgeneratortag.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="tag"
+					type="text"
+					description="PLG_SYSTEM_TJSETGENERATORTAG_TAG_DESC"
+					label="PLG_SYSTEM_TJSETGENERATORTAG_TAG_LABEL"
+					default="ToolJoom"
+					size="20"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

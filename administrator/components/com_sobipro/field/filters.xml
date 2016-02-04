@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @version: $Id: filters.xml 4387 2015-02-19 12:24:35Z Radek Suski $
+ @package: SobiPro Component for Joomla!
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: http://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See http://www.gnu.org/licenses/gpl.html and http://sobipro.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ $Revision: 4387 $
+ $Author: Radek Suski $
+ File location: administrator/components/com_sobipro/field/filters.xml $
+-->
+
+<definition>
+	<header>
+		<title value="FLR.SITE_TITLE" />
+		<file type="script" filename="adm.filters" />
+	</header>
+	<toolbar title="FLR.SITE_TITLE" icon="SobiFields">
+		<button type="new" class="filter-edit" />
+		<divider />
+        <buttons icon="sitemap" buttons="sections-list" label="TB.SECTIONS" />
+        <divider />
+		<buttons type="options" dropdown-class="pull-right">
+			<button type="url" task="panel" />
+			<button type="url" task="config" />
+			<button type="url" task="acl" />
+			<button type="url" task="extensions.installed" />
+            <button type="url" task="template.info" />
+			<button type="help" target="_blank" />
+		</buttons>
+	</toolbar>
+	<body>
+		<div class="row-fluid">
+			<div class="span2" id="SPRightMenu">
+				<menu />
+			</div>
+			<div class="span10">
+				<message id="spMessage" />
+				<table>
+					<head>
+						<cell label="FLR.FILTER_ID" type="text" class="SpCellLeft" />
+						<cell label="FLR.EDIT_FILTER" type="text" class="SpCellCenter" />
+						<cell label="FLR.FILTER_NAME" type="text" class="SpCellLeft" />
+						<cell label="FLR.FILTER_MSG" type="text" class="SpCellLeft" />
+						<cell label="FLR.FILTER_REGEX" type="text" class="SpCellLeft" />
+					</head>
+					<loop subject="filters">
+						<cell type="text" value="id" class="SpCellLeft filterId" />
+						<cell type="text" class="SpCellCenter">
+							<button type="new" class="filter-edit" icon="edit" rel="var:[id]" />
+						</cell>
+						<cell type="text" value="name" class="SpCellLeft" />
+						<cell type="text" value="message" class="SpCellLeft" />
+						<cell type="text" value="regex" class="SpCellLeft" />
+					</loop>
+				</table>
+				<field type="modalWindow" id="filter-edit-window" header="FLR.EDIT_FILTER" />
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php" />
+		<hidden>
+			<field name="option" const="com_sobipro" />
+			<field name="task" default="" />
+		</hidden>
+	</config>
+</definition>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_judirectory/models/rules">
+    <fieldset name="details"
+              addfieldpath="/administrator/components/com_judirectory/models/fields">
+        <field
+                name="save_options"
+                type="list"
+                default="update"
+                label="COM_JUDIRECTORY_IF_LISTING_EXISTS_LABEL"
+                description="COM_JUDIRECTORY_IF_LISTING_EXISTS_DESC"
+                >
+            <option value="update">COM_JUDIRECTORY_UPDATE_EXISTING_LISTING</option>
+            <option value="create">COM_JUDIRECTORY_CREATE_NEW_LISTING</option>
+            <option value="ignore">COM_JUDIRECTORY_IGNORE</option>
+        </field>
+
+        <field
+                name="rebuild_alias"
+                type="list"
+                default="0"
+                label="COM_JUDIRECTORY_FIELD_REBUILD_ALIAS_LABEL"
+                description="COM_JUDIRECTORY_FIELD_REBUILD_ALIAS_DESC"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="created_by"
+                type="user"
+                filter="unset"
+                label="COM_JUDIRECTORY_FIELD_CREATED_BY_LABEL"
+                description="COM_JUDIRECTORY_FIELD_CREATED_BY_DESC"
+                />
+
+        <field
+                name="default_main_cat_id"
+                type="categorytree"
+                fetchself="true"
+                label="COM_JUDIRECTORY_FIELD_SELECT_DEFAULT_MAIN_CATEGORY_LABEL"
+                description="COM_JUDIRECTORY_FIELD_SELECT_DEFAULT_MAIN_CATEGORY_DESC"
+                required="true"
+                multiple="false"
+                />
+
+        <field
+                name="force_publish"
+                type="list"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_FORCE_PUBLISH_LABEL"
+                description="COM_JUDIRECTORY_FIELD_FORCE_PUBLISH_DESC"
+                >
+            <option value="">JNO</option>
+            <option value="1">COM_JUDIRECTORY_PUBLISHED</option>
+            <option value="0">COM_JUDIRECTORY_UNPUBLISHED</option>
+        </field>
+
+        <field
+                name="limit"
+                type="list"
+                default="5"
+                label="COM_JUDIRECTORY_FIELD_IMPORT_CSV_LIMIT_LABEL"
+                description="COM_JUDIRECTORY_FIELD_IMPORT_CSV_LIMIT_DESC"
+                >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </field>
+    </fieldset>
+</form>

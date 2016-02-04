@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+
+		<field
+			name="id"
+			type="hidden"
+			default="0"
+			required="true"
+			readonly="true"/>							
+															
+		<field
+			id="title"
+			name="title"
+			type="text"
+			required="true"
+			label="Title"
+			description="title_Desc"
+			class="inputbox"
+			size="40"/>						
+								
+						
+		<field
+			id="description"
+			name="description"
+			type="editor"
+			label="Description"
+			description="description_Desc"
+			class="inputbox"
+			buttons="readmore,pagebreak"/>
+							
+		<field
+			id="published"
+			name="published"
+			type="list"
+			class="inputbox"
+			default="1"
+			size="1"
+			label="JField_Published_Label"
+			description="JField_Published_Desc">
+			<option
+				value="1">
+				JOption_Published</option>
+			<option
+				value="0">
+				JOption_UnPublished</option>
+			<option
+				value="-1">
+				JOption_Archived</option>
+			<option
+				value="-2">
+				JOption_Trashed</option>
+		</field>
+                          
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>						  
+							
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>						  
+							
+		<field
+			name="ordering"
+			type="hidden"
+			filter="unset"/>						  
+															
+		<field
+			id="asset_id"
+			name="asset_id"
+			type="text"
+			required="false"
+			label="Asset_id"
+			description="asset_id_Desc"
+			class="inputbox"
+			size="40"/>						
+								
+														
+		<field
+			id="filetype"
+			name="filetype"
+			type="media"
+			required="false"
+			label="Filetype"
+			description="filetype_Desc"
+			class="inputbox"
+			size="40"/>						
+								
+														
+		<field
+			id="created_date"
+			name="created_date"
+			type="text"
+			required="false"
+			label="Created_date"
+			description="created_date_Desc"
+			class="inputbox"
+			size="40"/>						
+								
+								
+	</fields>	
+		
+</form>	

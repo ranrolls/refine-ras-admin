@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Free Text</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>freetext</folder>
+    <core>0</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/freetext">
+            <file>freetext.xml</file>
+            <file>freetext.php</file>
+            <file>index.html</file>
+            <folder>tmpl</folder>
+        </files>
+    </fileset>
+    <config>
+        <field
+                name="text"
+                type="editor"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_FREE_TEXT_LABEL"
+                description="COM_JUDIRECTORY_FIELD_FREE_TEXT_DESC"
+                />
+    </config>
+</extension>

@@ -1,0 +1,16 @@
+.judir-pending-comments .judir-frontend-toolbar {
+	margin : 10px 0;
+}
+
+.judir-pending-comments table {
+	clear      : both;
+	margin-top : 10px;
+}
+
+.judir-pending-comments .center {
+	text-align : center;
+}
+
+.judir-pending-comments .judir-pagination #limit {
+	width: auto !important;
+}

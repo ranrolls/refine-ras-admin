@@ -1,0 +1,18 @@
+
+
+.view-pendinglistings .judir-frontend-toolbar {
+	margin : 10px 0;
+}
+
+.view-pendinglistings table {
+	clear      : both;
+	margin-top : 10px;
+}
+
+.view-pendinglistings .center {
+	text-align : center !important;
+}
+
+.view-pendinglistings .judir-pagination #limit {
+	width: auto;
+}

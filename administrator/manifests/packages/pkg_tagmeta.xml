@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0">
+    <name>Tag Meta</name>
+    <author>selfget.com</author>
+    <creationDate>March 2013</creationDate>
+    <packagename>tagmeta</packagename>
+    <version>1.7.2</version>
+    <url>http://www.selfget.com</url>
+    <packager>selfget.com</packager>
+    <packagerurl>http://www.selfget.com</packagerurl>
+    <description>Tag Meta package</description>
+    <update>http://www.selfget.com/tagmeta/update</update>
+    <files>
+        <file type="component" id="com_tagmeta" >com_tagmeta.zip</file>
+        <file type="plugin" id="plg_sys_tagmeta" group="system">plg_sys_tagmeta.zip</file>
+    </files>
+</extension>

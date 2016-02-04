@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @version: $Id: global.xml 4387 2015-02-19 12:24:35Z Radek Suski $
+ @package: SobiPro Component for Joomla!
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: http://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See http://www.gnu.org/licenses/gpl.html and http://sobipro.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ $Revision: 4387 $
+ $Author: Radek Suski $
+ File location: administrator/components/com_sobipro/config/global.xml $
+-->
+
+<definition>
+	<header>
+		<title value="GB.CFG.GLOBAL_CONFIGURATION" />
+		<file type="script" filename="bootstrap.tabs" />
+	</header>
+	<toolbar title="var:[site_title]" icon="SobiSectionCfg">
+		<button type="apply" task="config.save" />
+		<divider />
+        <buttons icon="sitemap" buttons="sections-list" label="TB.SECTIONS" />
+        <divider />
+		<buttons type="options" dropdown-class="pull-right">
+			<button type="url" task="panel" />
+			<button type="url" task="acl" />
+			<button type="url" task="extensions.installed" />
+            <button type="url" task="template.info" />
+			<button type="help" target="_blank" />
+		</buttons>
+	</toolbar>
+	<body>
+		<div class="row-fluid">
+			<div class="span2" id="SPRightMenu">
+				<menu />
+			</div>
+			<div class="span10">
+				<message id="spMessage" />
+				<tabs>
+					<tab label="GB.CFG.GENERAL">
+						<div class="row-fluid">
+							<div class="span12">
+								<fieldset label="GB.CFG.LANG">
+									<field type="toggle" name="spcfg[lang.multimode]" value="lang.multimode" label="GB.CFG.MULTILANG" prefix="onoff" />
+									<field type="toggle" name="spcfg[lang.engb_preload]" value="lang.engb_preload" label="GB.CFG.ENGB_PRELOAD" prefix="yes_no" />
+								</fieldset>
+								<fieldset label="GBN.CFG.HTML_INPUT">
+									<field type="textarea" name="spcfg[html.allowed_tags_array]" value="html.allowed_tags_array" label="GB.CFG.ALLOWED_TAGS" editor="false" class="input-splarge" rows="2" style="" />
+									<field type="textarea" name="spcfg[html.allowed_attributes_array]" value="html.allowed_attributes_array" label="GB.CFG.ALLOWED_ATTRIBUTES" editor="false" class="input-splarge" rows="2" style="" />
+								</fieldset>
+								<fieldset label="GBN.CFG.PBY_SUPPORT">
+									<field type="toggle" name="spcfg[general.show_pb]" value="general.show_pb" label="GB.CFG.PBY_HEAD" prefix="show" />
+									<message label="GBN.CFG.PBY_EXPL" class="spConfigAlert" type="warning" dismiss-button="false" />
+								</fieldset>
+							</div>
+						</div>
+					</tab>
+					<tab label="GBN.CFG.PAYMENTS">
+						<div class="row-fluid">
+							<div class="span12">
+								<fieldset>
+									<field type="select" name="spcfg[payments.dec_point]" value="payments.dec_point" selected="payments.dec_point" label="GBN.CFG.PMN_DEC_POINT" class="input-mini">
+										<values>
+											<option value="," label="," />
+											<option value="." label="." />
+										</values>
+									</field>
+									<field type="text" name="spcfg[payments.currency]" value="payments.currency" label="GB.CFG.CURRENCY" class="input-mini" />
+									<field type="select" label="GB.CFG.PMN_FORMAT" name="spcfg[payments.format]" selected="payments.format" class="input-xlarge">
+										<values>
+											<option value="%value %currency" label="GB.CFG.PMN_FORMAT_VC" />
+											<option value="%currency %value" label="GB.CFG.PMN_FORMAT_CV" />
+										</values>
+									</field>
+									<field type="text" name="spcfg[payments.vat]" value="payments.vat" label="GBN.CFG.PMN_VAT" class="input-mini">
+										<add where="after">
+											<text>%</text>
+										</add>
+									</field>
+									<field type="toggle" name="spcfg[payments.vat_brutto]" value="payments.vat_brutto" label="GB.CFG.PMN_PRICE_BRUTTO" prefix="yes_no" />
+									<field type="toggle" name="spcfg[payments.discount_to_netto]" value="payments.discount_to_netto" label="GB.CFG.DISCOUNT_TO_NETTO" prefix="yes_no" />
+									<field type="select" label="GB.CFG.PMN_PRC_FORMAT" name="spcfg[payments.percent_format]" selected="payments.percent_format" class="input-xlarge">
+										<values>
+											<option value="%number%sign" label="GB.CFG.PMN_PRC_FORMAT_NS" />
+											<option value="%number %sign" label="GB.CFG.PMN_PRC_FORMAT_NSS" />
+                                            <option value="%sign%number" label="GB.CFG.PMN_PRC_FORMAT_SN" />
+                                            <option value="%sign %number" label="GB.CFG.PMN_PRC_FORMAT_SSN" />
+										</values>
+									</field>
+								</fieldset>
+							</div>
+						</div>
+					</tab>
+					<tab label="GBN.CFG.CACHE_HEAD">
+						<div class="row-fluid">
+							<div class="span12">
+								<fieldset>
+									<message label="GBN.CFG.ACCEL" type="error" dismiss-button="false" class="spConfigAlert" />
+									<field type="toggle" name="spcfg[cache.l3_enabled]" value="cache.l3_enabled" label="GB.CFG.DATA_ACCELERATOR" prefix="onoff" />
+								</fieldset>
+                                <fieldset label="GB.CFG.XML_ACCELERATOR">
+                                    <field type="toggle" name="spcfg[cache.xml_enabled]" value="cache.xml_enabled" label="GB.CFG.XML_ACCELERATOR_YES" prefix="yes_no" />
+                                    <field type="toggle" name="spcfg[cache.xml_no_reg]" value="cache.xml_no_reg" label="GB.CFG.XML_ACCELERATOR_NO_REG" prefix="yes_no" />
+                                </fieldset>
+								<fieldset label="GB.CFG.CACHE">
+									<field type="toggle" name="spcfg[cache.include_js_files]" value="cache.include_js_files" label="GBN.CFG.INCLUDE_JS_FILES_CACHE" prefix="onoff" />
+									<field type="toggle" name="spcfg[cache.include_css_files]" value="cache.include_css_files" label="GBN.CFG.INCLUDE_CSS_FILES_CACHE" prefix="onoff" />
+								</fieldset>
+								<fieldset label="GBN.CFG.COMPRESS_FILES">
+									<field type="toggle" name="spcfg[cache.compress_js]" value="cache.compress_js" label="GBN.CFG.COMPRESS_JS_FILES" prefix="onoff" />
+								</fieldset>
+							</div>
+						</div>
+					</tab>
+					<tab label="GBN.CFG.DEB_HEAD">
+						<div class="row-fluid">
+							<div class="span12">
+								<fieldset label="GBN.CFG.DEB_DEBUG">
+									<field type="toggle" name="spcfg[debug.xml_raw]" value="debug.xml_raw" label="GBN.CFG.DEB_XML_RAW" prefix="onoff" />
+									<field type="text" name="spcfg[debug.xml_ip]" value="debug.xml_ip" label="GBN.CFG.DEB_XML_IP" class="input-medium" />
+								</fieldset>
+								<fieldset label="GBN.CFG.DEB_LOG">
+									<field type="select" label="GBN.CFG.DEB_LEVEL" name="spcfg[debug.level]" selected="debug.level" class="input-xlarge">
+										<values>
+											<option value="0" label="GB.CFG.DEB_LEVEL_NONE" />
+											<option value="1" label="GB.CFG.DEB_LEVEL_ERROR" />
+											<option value="2" label="GB.CFG.DEB_LEVEL_WARNING" />
+											<option value="30719" label="GB.CFG.DEB_LEVEL_ALL" />
+										</values>
+									</field>
+                                    <field type="toggle" name="spcfg[debug.display_errors]" value="debug.display_errors" label="GBN.CFG.DEB_DISPLAY_ERRORS" prefix="yes_no" />
+								</fieldset>
+							</div>
+						</div>
+					</tab>
+				</tabs>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php" />
+		<hidden>
+			<field name="option" default="com_sobipro" />
+			<field name="task" default="" />
+			<field name="method" default="xhr" />
+		</hidden>
+	</config>
+</definition>

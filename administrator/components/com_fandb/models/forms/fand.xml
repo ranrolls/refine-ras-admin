@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_fandb/models/rules"
+	addfieldpath="/administrator/components/com_fandb/models/fields"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			class="inputbox title"
+			default=""
+			description=""
+			label="Title"
+			name="title"
+			size="40"
+			type="text"
+		/>
+	</fieldset>
+</form>

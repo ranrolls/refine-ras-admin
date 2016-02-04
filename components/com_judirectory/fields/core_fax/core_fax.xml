@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Core Fax</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>core_fax</folder>
+    <core>1</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/core_fax">
+            <file>core_fax.xml</file>
+            <file>core_fax.php</file>
+            <file>index.html</file>
+        </files>
+    </fileset>
+    <config>
+        <field
+                name="regex"
+                type="list"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_REGEX_LABEL"
+                description="COM_JUDIRECTORY_FIELD_REGEX_DESC"
+                >
+            <option value="">COM_JUDIRECTORY_NONE</option>
+            <option value="/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/">COM_JUDIRECTORY_TELEPHONE_NUMBER</option>
+            <option value="custom">COM_JUDIRECTORY_CUSTOM_REGEX</option>
+        </field>
+
+        <field
+                name="custom_regex"
+                type="text"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_CUSTOM_REGEX_LABEL"
+                description="COM_JUDIRECTORY_FIELD_CUSTOM_REGEX_DESC"
+                />
+
+        <field
+                name="invalid_message"
+                type="text"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_INVALID_MESSAGE_LABEL"
+                description="COM_JUDIRECTORY_FIELD_INVALID_MESSAGE_DESC"
+                />
+
+        <field name="size"
+               type="text"
+               label="COM_JUDIRECTORY_FIELD_SIZE_LABEL"
+               description="COM_JUDIRECTORY_FIELD_SIZE_DESC"
+               default="32"
+                />
+
+        <field name="placeholder"
+               type="text"
+               label="COM_JUDIRECTORY_FIELD_PLACEHOLDER_LABEL"
+               description="COM_JUDIRECTORY_FIELD_PLACEHOLDER_DESC"
+               default=""
+                />
+        <field
+                name="auto_suggest"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_AUTO_SUGGEST_LABEL"
+                description="COM_JUDIRECTORY_FIELD_AUTO_SUGGEST_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </config>
+</extension>

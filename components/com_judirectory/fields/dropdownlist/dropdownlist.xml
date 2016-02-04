@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Dropdown List</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>dropdownlist</folder>
+    <core>0</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/dropdownlist">
+            <file>dropdownlist.xml</file>
+            <file>dropdownlist.php</file>
+            <file>dropdownlist.css</file>
+            <file>dropdownlist.js</file>
+            <file>index.html</file>
+            <folder>tmpl</folder>
+            <folder>images</folder>
+        </files>
+    </fileset>
+    <config>
+        <field name="size"
+               type="text"
+               default="1"
+               label="COM_JUDIRECTORY_FIELD_SIZE_LABEL"
+               description="COM_JUDIRECTORY_FIELD_SIZE_DESC"
+                />
+
+        <field
+                name="tag_search"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_TAG_SEARCH_LABEL"
+                description="COM_JUDIRECTORY_FIELD_TAG_SEARCH_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="search_multiple"
+                type="radio"
+                default="1"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_SEARCH_MULTIPLE_LABEL"
+                description="COM_JUDIRECTORY_FIELD_SEARCH_MULTIPLE_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </config>
+</extension>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_judirectory/models/rules">
+    <fieldset name="details">
+        <field name="id"
+               type="text"
+               default="0"
+               required="true"
+               readonly="true"
+               class="readonly"
+               label="COM_JUDIRECTORY_FIELD_ID_LABEL"
+               description="COM_JUDIRECTORY_FIELD_ID_DESC"
+                />
+
+        <field
+                name="asset_id"
+                type="hidden"
+                filter="unset"
+                />
+
+        <field
+                name="name"
+                type="text"
+                default=""
+                size="30"
+                required="true"
+                label="COM_JUDIRECTORY_FIELD_NAME_LABEL"
+                description="COM_JUDIRECTORY_FIELD_NAME_DESC"
+                />
+
+        <field
+                name="assigntocats"
+                type="CategoriesToAssignFieldGroup"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_ASSIGNED_CATEGORIES_LABEL"
+                description="COM_JUDIRECTORY_FIELD_ASSIGNED_CATEGORIES_DESC"
+                />
+
+        <field name="ordering"
+               type="juordering"
+               table="fields_groups"
+               class="inputbox"
+               label="COM_JUDIRECTORY_FIELD_ORDERING_LABEL"
+               description="COM_JUDIRECTORY_FIELD_ORDERING_DESC"
+                />
+
+        <field
+                name="access"
+                type="accesslevel"
+                class="inputbox"
+                label="COM_JUDIRECTORY_FIELD_ACCESS_LABEL"
+                description="COM_JUDIRECTORY_FIELD_ACCESS_DESC"
+                />
+
+        <field
+                name="description"
+                type="editor"
+                filter="raw"
+                width="600px"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_DESCRIPTION_LABEL"
+                description="COM_JUDIRECTORY_FIELD_DESCRIPTION_DESC"
+                hide="readmore,pagebreak"
+                />
+
+        <field
+                name="field_ordering_type"
+                type="fieldgroupfieldordering"
+                default="0"
+                label="COM_JUDIRECTORY_FIELD_FIELD_ORDREING_TYPE_LABEL"
+                description="COM_JUDIRECTORY_FIELD_FIELD_ORDREING_TYPE_DESC"
+                >
+        </field>
+
+        <field
+                name="published"
+                type="radio"
+                default="1"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_PUBLISHED_LABEL"
+                description="COM_JUDIRECTORY_FIELD_PUBLISHED_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="publishing">
+        <field name="created"
+               type="calendar"
+               class="inputbox"
+               default=""
+               format="%Y-%m-%d %H:%M:%S"
+               filter="user_utc"
+               label="COM_JUDIRECTORY_FIELD_CREATED_LABEL"
+               description="COM_JUDIRECTORY_FIELD_CREATED_DESC"
+                />
+
+        <field
+                name="created_by"
+                type="user"
+                label="COM_JUDIRECTORY_FIELD_CREATED_BY_LABEL"
+                description="COM_JUDIRECTORY_FIELD_CREATED_BY_DESC"
+                />
+
+        <field name="modified"
+               type="calendar"
+               class="readonly"
+               readonly="true"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="user_utc"
+               label="COM_JUDIRECTORY_FIELD_MODIFIED_LABEL"
+               description="COM_JUDIRECTORY_FIELD_MODIFIED_DESC"
+                />
+
+        <field name="modified_by"
+               type="user"
+               class="readonly"
+               readonly="true"
+               filter="unset"
+               label="COM_JUDIRECTORY_FIELD_MODIFIED_BY_LABEL"
+               description="COM_JUDIRECTORY_FIELD_MODIFIED_BY_DESC"
+                />
+    </fieldset>
+
+    <fieldset name="listing_metadata">
+        <field name="listing_metatitle"
+               type="text"
+               size="45"
+               label="COM_JUDIRECTORY_FIELD_LISTING_META_TITLE_LABEL"
+               description="COM_JUDIRECTORY_FIELD_LISTING_META_TITLE_DESC"
+                />
+
+        <field name="listing_metakeyword"
+               type="textarea"
+               rows="3"
+               cols="30"
+               class="inputbox"
+               label="COM_JUDIRECTORY_FIELD_LISTING_META_KEYWORD_LABEL"
+               description="COM_JUDIRECTORY_FIELD_LISTING_META_KEYWORD_DESC"
+                />
+
+        <field name="listing_metadescription"
+               type="textarea"
+               rows="3"
+               cols="30"
+               class="inputbox"
+               label="COM_JUDIRECTORY_FIELD_LISTING_META_DESCRIPTION_LABEL"
+               description="COM_JUDIRECTORY_FIELD_LISTING_META_DESCRIPTION_DESC"
+                />
+    </fieldset>
+
+    <fieldset name="permissions">
+        <field
+                id="rules"
+                name="rules"
+                type="rules"
+                label="COM_JUDIRECTORY_PERMISSION_FIELD_VALUE_LABEL"
+                translate_label="false"
+                filter="rules"
+                validate="rules"
+                component="com_judirectory"
+                section="field_group_field_value"
+                />
+    </fieldset>
+</form>

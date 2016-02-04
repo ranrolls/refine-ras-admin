@@ -1,0 +1,115 @@
+<?php
+/**
+ * @version: $Id: installer.php 4387 2015-02-19 12:24:35Z Radek Suski $
+ * @package: SobiPro Library
+
+ * @author
+ * Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ * Email: sobi[at]sigsiu.net
+ * Url: http://www.Sigsiu.NET
+
+ * @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ * @license GNU/LGPL Version 3
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 3 as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ * See http://www.gnu.org/licenses/lgpl.html and http://sobipro.sigsiu.net/licenses.
+
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ * $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ * $Revision: 4387 $
+ * $Author: Radek Suski $
+ * $HeadURL: file:///opt/svn/SobiPro/Component/branches/SobiPro-1.1/Site/lib/services/installers/installer.php $
+ */
+
+defined( 'SOBIPRO' ) || exit( 'Restricted access' );
+/**
+ * @author Radek Suski
+ * @version 1.0
+ * @created 17-Jun-2010 12:35:23
+ */
+
+class SPInstaller extends SPObject
+{
+	/**
+	 * @var string
+	 */
+	protected $type = null;
+	/**
+	 * @var string
+	 */
+	protected $xmlFile = null;
+	/**
+	 * @var string
+	 */
+	protected $root = null;
+	/**
+	 * @var DOMDocument
+	 */
+	protected $definition = null;
+	/**
+	 * @var DOMXPath
+	 */
+	protected $xdef = null;
+
+	/**
+	 * @param string $definition
+	 * @param string $type
+	 * @return SPInstaller
+	 */
+	public function __construct( $definition, $type = null )
+	{
+		$this->type = $type;
+		$this->xmlFile = $definition;
+		$this->definition = new DOMDocument( Sobi::Cfg( 'xml.version', '1.0' ), Sobi::Cfg( 'xml.encoding', 'UTF-8' ) );
+		$this->definition->load( $this->xmlFile );
+		$this->xdef = new DOMXPath( $this->definition );
+		$this->root = dirname( $this->xmlFile );
+	}
+
+	protected function xGetString( $key )
+	{
+		$node = $this->xGetChilds( $key )->item( 0 );
+		return isset( $node ) ? $node->nodeValue : null;
+	}
+
+	/**
+	 * @param $key
+	 * @return DOMNodeList
+	 */
+	protected function xGetChilds( $key )
+	{
+		return $this->xdef->query( "/{$this->type}/{$key}" );
+	}
+
+	public function validate()
+	{
+		$type = ( $this->type == 'SobiProApp' ) ? 'application' : $this->type;
+		$schemaDef = SPLoader::path( 'lib.services.installers.schemas.' . $type, 'front', false, 'xsd' );
+		if ( !( SPFs::exists( $schemaDef ) ) || ( time() - filemtime( $schemaDef ) > ( 60 * 60 * 24 * 7 ) ) ) {
+			$connection = SPFactory::Instance( 'services.remote' );
+			$def = "https://xml.sigsiu.net/SobiPro/{$type}.xsd";
+			$connection->setOptions(
+				array(
+					'url' => $def,
+					'connecttimeout' => 10,
+					'header' => false,
+					'returntransfer' => true,
+					'ssl_verifypeer' => false,
+					'ssl_verifyhost' => 2,
+				)
+			);
+			$schema =& SPFactory::Instance( 'base.fs.file', SPLoader::path( 'lib.services.installers.schemas.' . $type, 'front', false, 'xsd' ) );
+			$file = $connection->exec();
+			if ( !( strlen( $file ) ) ) {
+				throw new SPException( SPLang::e( 'CANNOT_ACCESS_SCHEMA_DEF', $def ) );
+			}
+			$schema->content( $file );
+			$schema->save();
+			$schemaDef = $schema->filename();
+		}
+		if ( !( $this->definition->schemaValidate( $schemaDef ) ) ) {
+			throw new SPException( SPLang::e( 'CANNOT_VALIDATE_SCHEMA_DEF_AT', str_replace( SOBI_ROOT . DS, null, $this->xmlFile ), $def ) );
+		}
+	}
+}
+

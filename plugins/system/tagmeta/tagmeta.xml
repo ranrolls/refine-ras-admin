@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>plg_system_tagmeta</name>
+    <author>selfget.com</author>
+    <creationDate>March 2013</creationDate>
+    <copyright>Copyright (C) 2009 - 2013 selfget.com</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>info@selfget.com</authorEmail>
+    <authorUrl>http://www.selfget.com</authorUrl>
+    <version>1.7.2</version>
+    <description>PLG_SYS_TAGMETA_DESCRIPTION</description>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_tagmeta.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_tagmeta.sys.ini</language>
+        <language tag="it-IT">language/it-IT/it-IT.plg_system_tagmeta.ini</language>
+        <language tag="it-IT">language/it-IT/it-IT.plg_system_tagmeta.sys.ini</language>
+    </languages>
+
+  <files>
+    <filename plugin="tagmeta">tagmeta.php</filename>
+    <filename>index.html</filename>
+  </files>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="customauthor" type="text" default="" label="PLG_SYS_TAGMETA_CUSTOM_AUTHOR_LABEL" description="PLG_SYS_TAGMETA_CUSTOM_AUTHOR_DESC" />
+        <field name="addauthor" type="list" default="0" label="PLG_SYS_TAGMETA_ADD_AUTHOR_LABEL" description="PLG_SYS_TAGMETA_ADD_AUTHOR_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+          <option value="2">Preserve</option>
+        </field>
+        <field name="spacer1" type="spacer" hr="true"/>
+        <field name="customcopyright" type="text" default="" label="PLG_SYS_TAGMETA_CUSTOM_COPYRIGHT_LABEL" description="PLG_SYS_TAGMETA_CUSTOM_COPYRIGHT_DESC" />
+        <field name="addcopyright" type="list" default="0" label="PLG_SYS_TAGMETA_ADD_COPYRIGHT_LABEL" description="PLG_SYS_TAGMETA_ADD_COPYRIGHT_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+          <option value="2">Preserve</option>
+        </field>
+        <field name="spacer2" type="spacer" hr="true"/>
+        <field name="customgenerator" type="text" default="" label="PLG_SYS_TAGMETA_CUSTOM_GENERATOR_LABEL" description="PLG_SYS_TAGMETA_CUSTOM_GENERATOR_DESC" />
+        <field name="replacegenerator" type="list" default="0" label="PLG_SYS_TAGMETA_REPLACE_GENERATOR_LABEL" description="PLG_SYS_TAGMETA_REPLACE_GENERATOR_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+          <option value="2">Force</option>
+          <option value="3">Clean</option>
+        </field>
+        <field name="spacer3" type="spacer" hr="true"/>
+        <field name="addsitename" type="list" default="0" label="PLG_SYS_TAGMETA_ADD_SITE_NAME_LABEL" description="PLG_SYS_TAGMETA_ADD_SITE_NAME_DESC">
+          <option value="0">No</option>
+          <option value="1">Before</option>
+          <option value="2">After</option>
+        </field>
+        <field name="separator" type="text" default="\b-\b" label="PLG_SYS_TAGMETA_SEPARATOR_LABEL" description="PLG_SYS_TAGMETA_SEPARATOR_DESC" />
+        <field name="spacer4" type="spacer" hr="true"/>
+        <field name="cleandefaultpage" type="list" default="0" label="PLG_SYS_TAGMETA_CLEAN_DEFAULT_PAGE_LABEL" description="PLG_SYS_TAGMETA_CLEAN_DEFAULT_PAGE_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="metatitle" type="list" default="1" label="PLG_SYS_TAGMETA_META_TITLE_LABEL" description="PLG_SYS_TAGMETA_META_TITLE_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+          <option value="2">Force</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="cleancanonical" type="list" default="0" label="PLG_SYS_TAGMETA_CLEAN_CANONICAL_LABEL" description="PLG_SYS_TAGMETA_CLEAN_CANONICAL_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+          <option value="2">Preserve</option>
+        </field>
+        <field name="selfexcludecanonical" type="list" default="0" label="PLG_SYS_TAGMETA_SELF_EXCLUDE_CANONICAL_LABEL" description="PLG_SYS_TAGMETA_SELF_EXCLUDE_CANONICAL_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="spacer5" type="spacer" hr="true"/>
+        <field name="safewordcount" type="list" default="0" label="PLG_SYS_TAGMETA_SAFE_WORD_COUNT_LABEL" description="PLG_SYS_TAGMETA_SAFE_WORD_COUNT_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="cleankeys" type="list" default="0" label="PLG_SYS_TAGMETA_CLEAN_KEYS_LABEL" description="PLG_SYS_TAGMETA_CLEAN_KEYS_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="excludekeys" type="textarea" rows="10" cols="30" default="nbsp" label="PLG_SYS_TAGMETA_EXCLUDE_KEYS_LABEL" description="PLG_SYS_TAGMETA_EXCLUDE_KEYS_DESC" />
+        <field name="excludekeys2" type="textarea" rows="10" cols="30" default="nbsp" label="PLG_SYS_TAGMETA_EXCLUDE_KEYS2_LABEL" description="PLG_SYS_TAGMETA_EXCLUDE_KEYS2_DESC" />
+        <field name="spacer6" type="spacer" hr="true"/>
+        <field name="redirect" type="list" default="0" label="PLG_SYS_TAGMETA_REDIRECT_LABEL" description="PLG_SYS_TAGMETA_REDIRECT_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="basepath" type="text" default="" label="PLG_SYS_TAGMETA_BASEPATH_LABEL" description="PLG_SYS_TAGMETA_BASEPATH_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+
+</extension>

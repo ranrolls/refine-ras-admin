@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_judirectory">
+    <section name="component">
+        <action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC"/>
+        <action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC"/>
+        <action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC"/>
+        <action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC"/>
+        <action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC"/>
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC"/>
+        <action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC"/>
+    </section>
+
+    <section name="component_category">
+        <action name="judir.category.create"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_CREATE_DESC"
+                />
+        <action name="judir.category.edit"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_DESC"
+                />
+        <action name="judir.category.edit.state"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_STATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_STATE_DESC"
+                />
+        <action name="judir.category.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_OWN_DESC"
+                />
+        <action name="judir.category.delete"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_DESC"
+                />
+        <action name="judir.category.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_OWN_DESC"
+                />
+    </section>
+
+    <section name="component_listing">
+        <action name="judir.listing.create"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_DESC"
+                />
+        <action name="judir.listing.create.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.listing.edit"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_DESC"
+                />
+        <action name="judir.listing.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_DESC"
+                />
+        <action name="judir.listing.edit.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.listing.delete"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_DESC"
+                />
+        <action name="judir.listing.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_DESC"
+                />
+        <action name="judir.listing.report"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_DESC"
+                />
+        <action name="judir.listing.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.listing.contact"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_DESC"
+                />
+        <action name="judir.listing.contact.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <section name="component_comment">
+        <action name="judir.comment.create"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_DESC"
+                />
+        <action name="judir.comment.create.many_times"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_DESC"
+                />
+        <action name="judir.comment.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.reply"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_DESC"
+                />
+        <action name="judir.comment.reply.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.comment.vote"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_DESC"
+                />
+        <action name="judir.comment.report"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_DESC"
+                />
+        <action name="judir.comment.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <section name="component_single_rating">
+        <action name="judir.single.rate"
+                title="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_DESC"
+                />
+
+        <action name="judir.single.rate.many_times"
+                title="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_MANY_TIMES_DESC"
+                />
+    </section>
+
+    <section name="component_criteria">
+        <action name="judir.criteria.rate"
+                title="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_DESC"
+                />
+        <action name="judir.criteria.rate.many_times"
+                title="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_MANY_TIMES_DESC"
+                />
+    </section>
+
+    <section name="component_moderator">
+        <action name="judir.moderator.create"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_CREATE_DESC"
+                />
+        <action name="judir.moderator.edit"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_DESC"
+                />
+        <action name="judir.moderator.edit.state"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_STATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_STATE_DESC"
+                />
+        <action name="judir.moderator.delete"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_DELETE_DESC"
+                />
+    </section>
+
+    <section name="component_field_value">
+        <action name="judir.field.value.submit"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SUBMIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SUBMIT_DESC"
+                />
+        <action name="judir.field.value.edit"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_DESC"
+                />
+        <action name="judir.field.value.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_OWN_DESC"
+                />
+        <action name="judir.field.value.search"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SEARCH_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SEARCH_DESC"
+                />
+    </section>
+
+    <!-- layer 2 -->
+
+    <section name="top_category_category">
+        <action name="judir.category.create"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_CREATE_DESC"
+                />
+        <action name="judir.category.edit"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_DESC"
+                />
+        <action name="judir.category.edit.state"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_STATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_STATE_DESC"
+                />
+        <action name="judir.category.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_OWN_DESC"
+                />
+        <action name="judir.category.delete"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_DESC"
+                />
+        <action name="judir.category.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_OWN_DESC"
+                />
+    </section>
+
+    <section name="top_category_listing">
+        <action name="judir.listing.create"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_DESC"
+                />
+        <action name="judir.listing.create.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.listing.edit"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_DESC"
+                />
+        <action name="judir.listing.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_DESC"
+                />
+        <action name="judir.listing.edit.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.listing.delete"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_DESC"
+                />
+        <action name="judir.listing.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_DESC"
+                />
+        <action name="judir.listing.report"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_DESC"
+                />
+        <action name="judir.listing.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.listing.contact"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_DESC"
+                />
+        <action name="judir.listing.contact.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <section name="top_category_comment">
+        <action name="judir.comment.create"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_DESC"
+                />
+        <action name="judir.comment.create.many_times"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_DESC"
+                />
+        <action name="judir.comment.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.reply"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_DESC"
+                />
+        <action name="judir.comment.reply.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.comment.vote"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_DESC"
+                />
+        <action name="judir.comment.report"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_DESC"
+                />
+        <action name="judir.comment.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <section name="top_category_single_rating">
+        <action name="judir.single.rate"
+                title="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_DESC"
+                />
+        <action name="judir.single.rate.many_times"
+                title="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_SINGLE_RATING_RATE_MANY_TIMES_DESC"
+                />
+    </section>
+
+    <!-- layer 3 -->
+
+    <section name="category_category">
+        <action name="judir.category.create"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_CREATE_DESC"
+                />
+        <action name="judir.category.edit"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_DESC"
+                />
+        <action name="judir.category.edit.state"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_STATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_STATE_DESC"
+                />
+        <action name="judir.category.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_EDIT_OWN_DESC"
+                />
+        <action name="judir.category.delete"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_DESC"
+                />
+        <action name="judir.category.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CATEGORY_DELETE_OWN_DESC"
+                />
+    </section>
+
+    <section name="category_listing">
+        <action name="judir.listing.create"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_DESC"
+                />
+        <action name="judir.listing.create.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.listing.edit"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_DESC"
+                />
+        <action name="judir.listing.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_DESC"
+                />
+        <action name="judir.listing.edit.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.listing.delete"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_DESC"
+                />
+        <action name="judir.listing.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_DESC"
+                />
+        <action name="judir.listing.report"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_DESC"
+                />
+        <action name="judir.listing.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.listing.contact"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_DESC"
+                />
+        <action name="judir.listing.contact.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <section name="category_comment">
+        <action name="judir.comment.create"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_DESC"
+                />
+        <action name="judir.comment.create.many_times"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_DESC"
+                />
+        <action name="judir.comment.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.reply"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_DESC"
+                />
+        <action name="judir.comment.reply.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.comment.vote"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_DESC"
+                />
+        <action name="judir.comment.report"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_DESC"
+                />
+        <action name="judir.comment.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <!-- layer 4 -->
+
+    <section name="listing_listing">
+        <action name="judir.listing.edit"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_DESC"
+                />
+        <action name="judir.listing.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_EDIT_OWN_DESC"
+                />
+        <action name="judir.listing.delete"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_DESC"
+                />
+        <action name="judir.listing.delete.own"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_DELETE_OWN_DESC"
+                />
+        <action name="judir.listing.report"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_DESC"
+                />
+        <action name="judir.listing.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_REPORT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.listing.contact"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_DESC"
+                />
+        <action name="judir.listing.contact.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_LISTING_CONTACT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <section name="listing_comment">
+        <action name="judir.comment.create"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_DESC"
+                />
+        <action name="judir.comment.create.many_times"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_MANY_TIMES_DESC"
+                />
+        <action name="judir.comment.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_CREATE_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.reply"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_DESC"
+                />
+        <action name="judir.comment.reply.auto_approval"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPLY_AUTO_APPROVAL_DESC"
+                />
+        <action name="judir.comment.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_NO_CAPTCHA_DESC"
+                />
+        <action name="judir.comment.vote"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_VOTE_DESC"
+                />
+        <action name="judir.comment.report"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_DESC"
+                />
+        <action name="judir.comment.report.no_captcha"
+                title="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_COMMENT_REPORT_NO_CAPTCHA_DESC"
+                />
+    </section>
+
+    <!-- layer 2 -->
+
+    <section name="criteria_group_criteria">
+        <action name="judir.criteria.rate"
+                title="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_DESC"
+                />
+        <action name="judir.criteria.rate.many_times"
+                title="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_MANY_TIMES_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_CRITERIA_RATE_MANY_TIMES_DESC"
+                />
+    </section>
+
+    <!-- layer 2 -->
+
+    <section name="moderator_moderator">
+        <action name="judir.moderator.edit"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_DESC"
+                />
+        <action name="judir.moderator.edit.state"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_STATE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_EDIT_STATE_DESC"
+                />
+        <action name="judir.moderator.delete"
+                title="COM_JUDIRECTORY_ACCESS_MODERATOR_DELETE_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_MODERATOR_DELETE_DESC"
+                />
+    </section>
+
+    <!-- layer 2 -->
+
+    <section name="field_group_field_value">
+        <action name="judir.field.value.submit"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SUBMIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SUBMIT_DESC"
+                />
+        <action name="judir.field.value.edit"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_DESC"
+                />
+        <action name="judir.field.value.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_OWN_DESC"
+                />
+        <action name="judir.field.value.search"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SEARCH_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SEARCH_DESC"
+                />
+    </section>
+
+    <!-- layer 3 -->
+
+    <section name="field_field_value">
+        <action name="judir.field.value.submit"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SUBMIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SUBMIT_DESC"
+                />
+        <action name="judir.field.value.edit"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_DESC"
+                />
+        <action name="judir.field.value.edit.own"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_OWN_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_EDIT_OWN_DESC"
+                />
+        <action name="judir.field.value.search"
+                title="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SEARCH_LABEL"
+                description="COM_JUDIRECTORY_ACCESS_FIELD_VALUE_SEARCH_DESC"
+                />
+    </section>
+</access>

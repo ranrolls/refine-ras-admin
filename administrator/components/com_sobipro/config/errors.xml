@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @version: $Id: errors.xml 4387 2015-02-19 12:24:35Z Radek Suski $
+ @package: SobiPro Component for Joomla!
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: http://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See http://www.gnu.org/licenses/gpl.html and http://sobipro.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ $Revision: 4387 $
+ $Author: Radek Suski $
+ File location: administrator/components/com_sobipro/config/errors.xml $
+-->
+
+<definition>
+	<header>
+		<title value="ERR.SITE_TITLE" />
+	</header>
+	<toolbar title="ERR.SITE_TITLE" icon="SobiConfig">
+		<divider />
+		<buttons type="actions">
+			<button label="TB.PURGE" task="error.purge" icon="trash" />
+			<button label="TB.DOWNLOAD_LOG" task="error.download" icon="save" />
+		</buttons>
+		<divider />
+        <buttons icon="sitemap" buttons="sections-list" label="TB.SECTIONS" />
+        <divider />
+		<buttons type="options" dropdown-class="pull-right">
+			<button type="url" task="panel" />
+			<button type="url" task="config" />
+			<button type="url" task="acl" />
+			<button type="url" task="extensions.installed" />
+            <button type="url" task="template.info" />
+			<button type="help" target="_blank" />
+		</buttons>
+	</toolbar>
+	<body>
+		<div class="row-fluid">
+			<div class="span2" id="SPRightMenu">
+				<menu />
+			</div>
+			<div class="span10">
+				<message id="spMessage" />
+				<!--<header label="ERR.SITE_TITLE" icon="SobiFieldList" />-->
+				<table condition="errors.length">
+					<head>
+						<cell label="ERR.ERROR_INFO" type="text" class="SpCellCenterSmall" />
+						<cell />
+						<cell label="ERR.ERROR_DETAILS" type="text" class="SpCellCenter" />
+					</head>
+					<loop subject="errors">
+						<cell type="text" value="errNum" class="SpCellCenterSmall" />
+						<cell>
+							<cell type="text" value="errMsg" />
+							<cell label="ERR.ERROR_DATE" type="text" value="date" class="SpCellPair" />
+							<cell label="ERR.IN_FILE" type="text" value="errFile" class="SpCellPair" />
+							<cell label="ERR.REQUESTED_URI" type="text" value="errReq" class="SpCellPair" />
+						</cell>
+						<cell class="SpCellCenter">
+							<cell type="link" value="eid">
+								<url type="intern" class="label label-warning">
+									<param name="task" value="error.details" />
+									<param name="eid" value="eid" parse="true" />
+								</url>
+							</cell>
+						</cell>
+					</loop>
+					<foot>
+						<navigation />
+					</foot>
+				</table>
+				<div invert-condition="errors.length">
+					<message label="ERR.NO_ERRORS" type="info" dismiss-button="true" />
+				</div>
+				<pagination set="errSite" class="pagination pagination-centered pagination-toolbar" inputbox="right" type="ICON">
+					<param name="count" value="errors-count" parse="true" />
+					<param name="limit" value="errors-limit" parse="true" />
+					<param name="current" value="errors-site" parse="true" />
+					<param name="url">
+						<param name="option" value="com_sobipro" />
+						<param name="task" value="error" />
+					</param>
+				</pagination>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php" />
+		<hidden>
+			<field name="option" default="com_sobipro" />
+			<field name="task" default="" />
+		</hidden>
+	</config>
+</definition>

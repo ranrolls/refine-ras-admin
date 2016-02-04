@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_FANDB</name>
+	<creationDate>April 23, 2015</creationDate>
+	<author>Refine</author>
+	<authorEmail>ravindar.k@refine-interactive.com</authorEmail>
+	<authorUrl>www.refine-interactive.com</authorUrl>
+	<copyright>Copyright (C) 2015. All Rights Reserved</copyright>
+	<license>hello</license>
+	<version>3.4</version>
+	<description><![CDATA[
+		<h1>fandb (v.3.4)</h1>
+		<div style="clear: both;"></div>
+		<p>this is my first component. <strong>Built for Joomla 2.5.0.</strong></p>
+		<p>Created by <a href="http://www.refine-interactive.com" target="_blank">Refine | www.refine-interactive.com</a>
+	]]></description>
+
+	<!-- Runs on install; New in Joomla 1.5 -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on uninstall; New in Joomla 1.5 -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Runs on install/uninstall/update; New in Joomla 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Update Schema; New in Joomla 2.5 -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>fandb.php</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<administration>
+		<menu>COM_FANDB_MENU</menu>
+		<submenu>
+			<!-- Instead of link you can specify individual link attributes -->
+			<menu option="com_fandb" view="fandb">COM_FANDB_MENU_FANDB</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>fandb.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_fandb.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_fandb.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

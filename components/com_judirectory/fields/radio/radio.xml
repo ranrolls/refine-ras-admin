@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Radio</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>radio</folder>
+    <core>0</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/radio">
+            <file>radio.xml</file>
+            <file>radio.php</file>
+            <file>radio.css</file>
+            <file>radio.js</file>
+            <file>index.html</file>
+            <folder>tmpl</folder>
+            <folder>images</folder>
+        </files>
+    </fileset>
+    <config>
+        <field
+                name="tag_search"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_TAG_SEARCH_LABEL"
+                description="COM_JUDIRECTORY_FIELD_TAG_SEARCH_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="number_columns"
+                type="list"
+                default="0"
+                label="COM_JUDIRECTORY_FIELD_NUMBER_COLUMNS_LABEL"
+                description="COM_JUDIRECTORY_FIELD_NUMBER_COLUMNS_DESC">
+            <option value="0">COM_JUDIRECTORY_NO_COLUMN</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </field>
+    </config>
+</extension>

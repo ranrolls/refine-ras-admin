@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>SP Countdown</name>
+  <author>JoomShaper.com</author>
+  <creationDate>Aug 2012</creationDate>
+  <copyright>Copyright (C) 2010 - 2012 JoomShaper.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@joomshaper.com</authorEmail>
+  <authorUrl>www.joomshaper.com</authorUrl>
+  <version>1.0.0</version>
+  <description>Countdown module for Joomla 2.5 by JoomShaper.com</description>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_sp_countdown.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_sp_countdown">mod_sp_countdown.php</filename>
+    <folder>tmpl/</folder>
+    <folder>assets/</folder>
+    <filename>index.html</filename>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="pre_text" type="text" default="Our next event in" label="PRE_TEXT" description="PRE_TEXT_DESC" />
+        <field name="date_start" type="calendar" default="12/31/2013" label="JDATE" description="" format="%m/%d/%Y" />
+        <field name="time" type="text" default="12:00 AM" label="TIME" description="" />
+        <field name="day" type="text" default="Day" label="DAY" description="DAY_DESC" />
+        <field name="hr" type="text" default="Hr" label="HR" description="HR_DESC" />
+        <field name="min" type="text" default="Min" label="MIN" description="MIN_DESC" />
+        <field name="sec" type="text" default="Sec" label="SEC" description="SEC_DESC" />
+        <field name="post_text" type="text" default="" label="POST_TEXT" description="POST_TEXT_DESC" />
+        <field name="finish_text" type="text" default="Finally we are here" label="FINISH_TEXT" description="FINISH_TEXT_DESC" />
+        <field name="show_button" type="radio" default="0" label="SHOW_BUTTON" description="SHOW_BUTTON_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="button_text" type="text" default="" label="BUTTON_TEXT" description="BUTTON_TEXT_DESC" />
+        <field name="button_link" type="text" default="" label="BUTTON_LINK_TEXT" description="BUTTON_LINK_TEXT_DESC" />
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="text" default="" label="MODSFX" description="MODSFX_DESC" />
+        <field name="cache" type="hidden" default="0"/>
+        <field name="module_cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+          <option value="1">Use global</option>
+          <option value="0">No caching</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

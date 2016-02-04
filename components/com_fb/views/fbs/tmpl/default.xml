@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Fblist">
+		<help
+			key = "FbLIST_DESC"
+		/>
+		<message>
+			<![CDATA[FbLIST_DESC]]>
+		</message>
+	</layout>
+		<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+	</fields>
+</metadata>

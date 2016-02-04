@@ -1,0 +1,18 @@
+.boxgrid{ 	border-bottom:5px solid #2a4c75;width: 24%; 	height:450px;  	float:left;	overflow: hidden; 	position: relative; margin-right:1%;}
+
+.boxgrid img{ 	max-width:100%;	position: relative; 	top: 0; 	left: 0; 	border: 0; }
+
+.boxcontain{padding:15px 10px;-webkit-transition:all 2s; transition:all 2s;}
+
+.boxcontain h3{margin-top:0;text-align:left; font-weight:bold; font-size:18px}
+
+.boxcontain h5{margin-top:0;margin-bottom:20px;text-align:center; font-weight:200;}
+
+.boxcontain a{width:20px; height:20px;border:1px solid #fff; border-radius:50%;margin:5px; text-align:center;padding:8px;}
+.boxcontain p{margin-top:10px;}
+.boxicon{text-align:center;}
+.boxcaption{ 	float: left; padding-top:10px;	position: static;	background: #fff; 	height: 100%;	width: 100%; }
+
+.caption:hover .boxcontain{padding-top:0px;}
+
+.boxcontain a{border:0;color:#fff;padding:0;}

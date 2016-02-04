@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>
+                    Sigsiu.NET News
+                </title>
+    <link>https://www.sigsiu.net/news/view,rss</link>
+    <description>
+                    Latest News of Sigsiu.NET, the company behind SobiPro - best directory component for Joomla! powered websites!
+                </description>
+    <category>Web development</category>
+    <copyright>Sigsiu.NET GmbH 2015. All rights reserved.</copyright>
+    <image>
+      <url>https://www.sigsiu.net/images/Sigsiu.NET-S.png</url>
+      <title>Sigsiu.NET GmbH</title>
+      <link>https://www.sigsiu.net</link>
+    </image>
+    <language>en-GB</language>
+    <generator>SobiPro 1.1</generator>
+    <pubDate>2015-07-23T16:50:37+02:00</pubDate>
+    <item>
+      <title>A Cars and Vehicles Marketplace with SobiPro</title>
+      <guid>https://www.sigsiu.net/news/1110-a-cars-and-vehicles-marketplace-with-sobipro</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/vc/mod_SobiCars2-vcard.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1110-a-cars-and-vehicles-marketplace-with-sobipro</link>
+      <description>The Cars and Vehicles Marketplace template for SobiPro is back!&#13;
+Offer cars with SobiPro now.&#13;
+</description>
+      <pubDate>2015-07-23T16:50:37+02:00</pubDate>
+    </item>
+    <item>
+      <title>Update of Aggregation Field</title>
+      <guid>https://www.sigsiu.net/news/1082-update-of-aggregation-field</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/SobiPro-News-mod-field.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1082-update-of-aggregation-field</link>
+      <description>An update of the Aggregation Field is available with some great new features added, like the tags management.&#13;
+</description>
+      <pubDate>2015-07-03T17:49:22+02:00</pubDate>
+    </item>
+    <item>
+      <title>SobiPro goes e-commerce</title>
+      <guid>https://www.sigsiu.net/news/1049-sobipro-goes-e-commerce</guid>
+      <author>Radek Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/vc/mod_sp-shoppingcart-2.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1049-sobipro-goes-e-commerce</link>
+      <description>Finally you can use SobiPro now also as a shop due to the integration of SobiPro with the J2Store shopping cart extension!</description>
+      <pubDate>2015-06-11T13:20:07+02:00</pubDate>
+    </item>
+    <item>
+      <title>JaB15 - Recap</title>
+      <guid>https://www.sigsiu.net/news/1046-jab15-recap</guid>
+      <author>Radek Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/vc/mod_group-jab15.jpg" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1046-jab15-recap</link>
+      <description>At the end of May this year something really scary happened. A bunch of people from the famous Joomla! gang took over a hotel in a wonderful city called Prague. </description>
+      <pubDate>2015-06-08T13:20:47+02:00</pubDate>
+    </item>
+    <item>
+      <title>Sobi is 9 years old - and you will get gifts</title>
+      <guid>https://www.sigsiu.net/news/1024-sobi-is-9-years-old-and-you-will-get-gifts</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/vc/mod_birthday.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1024-sobi-is-9-years-old-and-you-will-get-gifts</link>
+      <description>Exactly 9 years ago we released the very first version of Sobi followed later by Sobi2 and SobiPro. We are so happy to have such a great community and we would love to say "thank you"!</description>
+      <pubDate>2015-05-25T12:19:47+02:00</pubDate>
+    </item>
+    <item>
+      <title>Update of Expiration App available</title>
+      <guid>https://www.sigsiu.net/news/1006-update-of-expiration-app-available</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/SobiPro-News-mod-app.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1006-update-of-expiration-app-available</link>
+      <description>An update of the Expiration Application is available now. This is a maintenance release. Update is recommended.</description>
+      <pubDate>2015-05-19T17:07:40+02:00</pubDate>
+    </item>
+    <item>
+      <title>Version 3.2 of SP-GeoMap Field released</title>
+      <guid>https://www.sigsiu.net/news/1003-version-3-2-of-sp-geomap-field-released</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/SobiPro-News-mod-field.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/1003-version-3-2-of-sp-geomap-field-released</link>
+      <description>This is a maintenance release of the SP-GeoMap Field with Proximity Search. Google 'Autocomplete' as search provider is added now, as well as two new languages.</description>
+      <pubDate>2015-05-15T13:22:05+02:00</pubDate>
+    </item>
+    <item>
+      <title>Update of SP-GeoMap Module</title>
+      <guid>https://www.sigsiu.net/news/987-update-of-sp-geomap-module</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/SobiPro-News-mod-module.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/987-update-of-sp-geomap-module</link>
+      <description>An update of the SP-GeoMap Module is available. This is a maintenance release which includes two new languages.</description>
+      <pubDate>2015-05-08T15:19:25+02:00</pubDate>
+    </item>
+    <item>
+      <title>New application Expiration</title>
+      <guid>https://www.sigsiu.net/news/975-new-application-expiration</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/SobiPro-News-mod-app.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/975-new-application-expiration</link>
+      <description>It is finally available: The Expiration application for SobiPro to let you manage the expiration notification and renew emails and the renew process.</description>
+      <pubDate>2015-04-28T17:22:29+02:00</pubDate>
+    </item>
+    <item>
+      <title>SobiPro 1.1.13 available</title>
+      <guid>https://www.sigsiu.net/news/922-sobipro-1-1-13-available</guid>
+      <author>Sigrid Suski</author>
+      <enclosure url="https://www.sigsiu.net/images/sobipro/news/SobiPro-News-mod-component.png" length="18000" type="image/png"/>
+      <link>https://www.sigsiu.net/news/922-sobipro-1-1-13-available</link>
+      <description>This is a maintenance release.&#13;
+It is recommended to update SobiPro to version 1.1.13!</description>
+      <pubDate>2015-04-01T15:44:41+02:00</pubDate>
+    </item>
+  </channel>
+</rss>

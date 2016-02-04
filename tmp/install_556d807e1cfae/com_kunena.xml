@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension version="1.6.0" type="sef_ext">
+	<name>Kunena Forum</name>
+	<author>ARTIO s.r.o.</author>
+	<creationDate>11. March 2014</creationDate>
+	<copyright>ARTIO s.r.o.</copyright>
+	<license>GNU/GPLv3 http://www.artio.net/license/gnu-general-public-license</license>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>www.artio.net</authorUrl>
+	<buyURL>http://www.artio.net/e-shop/joomsef/joomsef-extensions/joomsef-4-x-compatible/kunena-joomsef-4-extension</buyURL>
+	<version>3.0.12</version>
+	<description>Adds SEO support for Kunena forum component.</description>
+	<files>
+		<filename sef_ext="kunena">com_kunena.php</filename>
+	</files>
+	<install>
+	    <defaultParams>
+	        <defaultParam name="acceptVars" value="view;func;do;defaultmenu;catid;id;userid;limit;limitstart;sel;page" />
+          <defaultParam name="ignoreSource" value="0" />
+	    </defaultParams>
+	    <defaultFilters>
+			<defaultFilter>+^[0-9]+$=catid,defaultmenu,id,limit,limitstart,page,sel,userid</defaultFilter>
+			<defaultFilter>+^[0-9a-zA-Z -_]+$=do,func,view</defaultFilter>
+	    </defaultFilters>
+	</install>
+	<form>
+    	<fieldset name="Extension">
+            <field type="spacer" label="&lt;strong&gt;Topic Settings&lt;/strong&gt;"/>
+              
+      	    <field name="topicname1" type="list" default="none" label="Topic name 1st part" description="First part of topic name in the URL. Custom text may be set in the individual field.">
+      	      <option value="none">---</option>
+      	      <option value="id">ID</option>
+      	      <option value="subject">Title</option>
+      	      <option value="text">Custom text</option>
+      	    </field>
+            <field name="topicname2" type="list" default="subject" label="Topic name 2nd part" description="Second part of topic name in the URL. Custom text may be set in the individual field.">
+              <option value="none">---</option>
+              <option value="id">ID</option>
+              <option value="subject">Title</option>
+              <option value="text">Custom text</option>
+            </field>
+            <field name="topicnametext" type="text" default="Topic" label="Topic custom text" description="The custom text part for the topic name." />
+            
+            <field type="spacer" label="&lt;strong&gt;Announcement Settings&lt;/strong&gt;"/>
+            
+            <field name="announcename1" type="list" default="none" label="Announcement name 1st part" description="First part of announcement name in the URL. Custom text may be set in the individual field.">
+              <option value="none">---</option>
+              <option value="id">ID</option>
+              <option value="title">Title</option>
+              <option value="text">Custom text</option>
+            </field>
+            <field name="announcename2" type="list" default="title" label="Announcement name 2nd part" description="Second part of announcement name in the URL. Custom text may be set in the individual field.">
+              <option value="none">---</option>
+              <option value="id">ID</option>
+              <option value="title">Title</option>
+              <option value="text">Custom text</option>
+            </field>
+            <field name="announcenametext" type="text" default="Announcement" label="Announcement custom text" description="The custom text part for the announcement name." />
+            
+            <field type="spacer" label="&lt;strong&gt;Category Settings&lt;/strong&gt;"/>
+            
+      	    <field name="categories" type="list" default="2" label="Add categories to URL" description="Controls the way categories are added to URL.">
+      	      <option value="0">No</option>
+      	      <option value="1">Only last one</option>
+      	      <option value="2">All categories</option>
+      	    </field>
+            <field name="categoryname1" type="list" default="none" label="Category name 1st part" description="First part of category name in the URL. Custom text may be set in the individual field.">
+              <option value="none">---</option>
+              <option value="id">ID</option>
+              <option value="name">Title</option>
+              <option value="alias">Alias</option>
+              <option value="text">Custom text</option>
+            </field>
+            <field name="categoryname2" type="list" default="name" label="Category name 2nd part" description="Second part of category name in the URL. Custom text may be set in the individual field.">
+              <option value="none">---</option>
+              <option value="id">ID</option>
+              <option value="name">Title</option>
+              <option value="alias">Alias</option>
+              <option value="text">Custom text</option>
+            </field>
+            <field name="categorynametext" type="text" default="Forum" label="Category custom text" description="The custom text part for the category name." />
+            
+            <field type="spacer" label="&lt;strong&gt;Other Settings&lt;/strong&gt;"/>
+            
+         		<field name="doExclude" type="radio" class="btn-group" default="0" label="Exclude do action from URL" description="Helps to reduce number of URLs generated.">
+         			<option value="1">Yes</option>
+         			<option value="0">No</option>
+         		</field>
+         		<field name="idExclude" type="radio" class="btn-group" default="1" label="Exclude ID from URL" description="Helps to reduce number of URLs generated.">
+         			<option value="1">Yes</option>
+         			<option value="0">No</option>
+         		</field>
+         		<field name="optimize" type="radio" class="btn-group" default="1" label="Reduce URL count" description="Further helps to reduce number of URLs generated. (ignores name and fb_thread)">
+         			<option value="1">Yes</option>
+         			<option value="0">No</option>
+         		</field>
+         		<field name="smarturls" type="radio" class="btn-group" default="1" label="Smart URLs to messages" description="Helps to reduce number of URLs generated.">
+         			<option value="1">Yes</option>
+         			<option value="0">No</option>
+         		</field>
+         		<field name="userIdInsteadOfLogin" class="btn-group" type="radio" default="0" label="Use user ID instead of username in URL" description="Use user ID instead of username in URL">
+         			<option value="1">Yes</option>
+         			<option value="0">No</option>
+         		</field>
+       	</fieldset>
+   	</form>
+   	<updateservers>
+        <server name="ext_joomsef4_kunena" type="sef_update">http://www.artio.net/joomla-updates/list/ext_joomsef4_kunena.xml</server>
+  	</updateservers>
+</extension>

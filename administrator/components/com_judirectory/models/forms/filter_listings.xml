@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="COM_JUDIRECTORY_FILTER_SEARCH_DESC"
+                hint="JSEARCH_FILTER"
+                />
+
+        <field
+                name="published"
+                type="list"
+                default=""
+                class="input-medium"
+                label="COM_JUDIRECTORY_FILTER_PUBLISHED"
+                description="COM_JUDIRECTORY_FILTER_PUBLISHED_DESC"
+                onchange="this.form.submit();"
+                >
+            <option value="">JALL</option>
+            <option value="1">COM_JUDIRECTORY_PUBLISHED</option>
+            <option value="0">COM_JUDIRECTORY_UNPUBLISHED</option>
+        </field>
+
+        <field
+                name="featured"
+                type="list"
+                default=""
+                class="input-medium"
+                label="COM_JUDIRECTORY_FILTER_FEATURED"
+                description="COM_JUDIRECTORY_FILTER_FEATURED_DESC"
+                onchange="this.form.submit();"
+                >
+            <option value="">JALL</option>
+            <option value="1">COM_JUDIRECTORY_FEATURED</option>
+            <option value="0">COM_JUDIRECTORY_UNFEATURED</option>
+        </field>
+
+        <field
+                name="catid"
+                type="categorytree"
+                fetchself="true"
+                default=""
+                label="COM_JUDIRECTORY_FILTER_CATEGORY"
+                description="COM_JUDIRECTORY_FILTER_CATEGORY_DESC"
+                onchange="this.form.submit();"
+                >
+            <option value="">COM_JUDIRECTORY_SELECT_CATEGORY</option>
+        </field>
+
+        <field
+                name="access"
+                type="accesslevel"
+                size="1"
+                class="input-medium"
+                label="COM_JUDIRECTORY_FILTER_ACCESS"
+                description="COM_JUDIRECTORY_FILTER_ACCESS_DESC"
+                onchange="this.form.submit();"
+                />
+    </fields>
+
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="list"
+                label="COM_JUDIRECTORY_LIST_FULL_ORDERING"
+                description="COM_JUDIRECTORY_LIST_FULL_ORDERING_DESC"
+                onchange="this.form.submit();"
+                default="listing.title ASC"
+                >
+            <option value="">COM_JUDIRECTORY_SORT_BY</option>
+            <option value="listing.id ASC">COM_JUDIRECTORY_SORT_BY_ID_ASC</option>
+            <option value="listing.id DESC">COM_JUDIRECTORY_SORT_BY_ID_DESC</option>
+            <option value="listing.title ASC">COM_JUDIRECTORY_SORT_BY_TITLE_ASC</option>
+            <option value="listing.title DESC">COM_JUDIRECTORY_SORT_BY_TITLE_DESC</option>
+            <option value="c.title ASC">COM_JUDIRECTORY_CATEGORY_ASC</option>
+            <option value="c.title DESC">COM_JUDIRECTORY_CATEGORY_DESC</option>
+            <option value="listing.created_by ASC">COM_JUDIRECTORY_SORT_BY_CREATED_BY_ASC</option>
+            <option value="listing.created_by DESC">COM_JUDIRECTORY_SORT_BY_CREATED_BY_DESC</option>
+            <option value="access ASC">COM_JUDIRECTORY_SORT_BY_ACCESS_ASC</option>
+            <option value="access DESC">COM_JUDIRECTORY_SORT_BY_ACCESS_DESC</option>
+            <option value="listing.created ASC">COM_JUDIRECTORY_SORT_BY_CREATED_ASC</option>
+            <option value="listing.created DESC">COM_JUDIRECTORY_SORT_BY_CREATED_DESC</option>
+        </field>
+
+        <field
+                name="limit"
+                type="limitbox"
+                class="inputbox input-mini"
+                default="25"
+                label="COM_JUDIRECTORY_LIST_LIMIT"
+                description="COM_JUDIRECTORY_LIST_LIMIT_DESC"
+                onchange="this.form.submit();"
+                />
+    </fields>
+</form>

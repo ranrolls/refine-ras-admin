@@ -1,0 +1,164 @@
+.judir-form-listings {
+    border-top: 1px solid #DDDDDD;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.judir-form-listings .sort-pagination select {
+    float: left;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: 5px;
+    width: auto;
+}
+
+.judir-listing-list {
+	clear : both;
+	width : 100%;
+}
+
+.judir-listing-list .judir-listing {
+	box-sizing         : border-box;
+	-moz-box-sizing    : border-box;
+	-webkit-box-sizing : border-box;
+    float: left;
+    margin-top: 30px;
+    overflow: hidden;
+	position: relative;
+}
+
+
+.judir-listing-list .judir-listing .listing-image {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.judir-listing-list .judir-listing .listing-image a {
+	display : block;
+}
+
+.action .dropdown-toggle .icon-cog {
+	margin-top: 3px;
+}
+
+.judir-listing .private-actions {
+	opacity: 0;
+	transition:all 0.2s ease 0.1s;
+	-webkit-transition:all 0.2s ease 0.1s;
+	-moz-transition:all 0.2s ease 0.1s;
+	-o-transition:all 0.2s ease 0.1s;
+	position: relative;
+	right: 0;
+	top: 5px;
+}
+
+.judir-listing:hover .private-actions, .judir-listing .private-actions.open {
+	opacity: 1;
+}
+
+.judir-listing-list .judir-listing ul.listing-meta {
+    color: #666;
+    font-size: 12px;
+    list-style: outside none none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.judir-listing-list .judir-listing .listing-meta li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.judir-listing-list .judir-listing .listing-meta li .caption {
+	display:inline-block;
+}
+
+.judir-listing-list .judir-listing .listing-meta li .value{
+	display:inline-block;
+}
+
+.judir-listing-list .judir-listing .listing-title {
+	font-size: 125%;
+    line-height: 1.2;
+    margin: 5px 0 0 !important;
+    text-align: left;
+}
+
+.judir-listing-list .judir-listing .actions {
+	margin-top : 10px;
+}
+
+.judir-listing-list .judir-listing .listing-introtext {
+	margin: 10px 0;
+}
+
+.judir-listing-list .judir-listing .listing-tags {
+	margin-top : 10px;
+}
+
+.judir-listing-list .judir-listing .listing-tags .caption {
+    float: left;
+    font-size: 16px;
+    margin: 0 10px 0 0;
+    width: 20px;
+}
+
+.judir-listing-list .judir-listing .listing-tags ul {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.judir-listing-list .judir-listing .listing-tags ul li {
+	display      : inline-block;
+	list-style   : none outside none;
+	margin-right : 10px !important;
+	text-align   : center;
+}
+
+.judir-listing-list .judir-listing .listing-tags ul li a {
+	background    : none repeat scroll 0 0 #F0F0F0;
+	border-radius : 10px 10px 10px 10px;
+	color         : #666666;
+	display       : block;
+	line-height   : 1;
+	padding       : 4px 10px;
+	transition    : background-color 0.3s ease-in 0s;
+}
+
+.judir-listing-list .judir-listing .listing-tags ul li a:hover {
+	background: none repeat scroll 0 0 #DDDDDD;
+}
+
+.judir-listing-list .judir-listing .listing-actions {
+	margin-top : 10px;
+}
+
+.judir-listing-list .judir-listing .listing-summary {
+	margin        : 20px 0 0 !important;
+	background    : none repeat scroll 0 0 #F5F5F5;
+	border-bottom : 3px solid #E3E3E3;
+	clear         : both;
+	display       : inline-block;
+	padding       : 10px 0 !important;
+	width         : 100%;
+
+}
+
+.judir-listing-list .judir-listing .listing-summary .listing-field {
+	float       : left;
+	margin : 0 10px !important;
+}
+
+.judir-listing-list .judir-listing .listing-summary .listing-field .caption {
+	float : left;
+	margin-right: 8px;
+}
+
+.judir-listing-list .judir-listing .listing-summary .listing-field .value {
+	float        : left;
+}
+
+.judir-filter-listing select{
+    margin-right: 5px;
+}

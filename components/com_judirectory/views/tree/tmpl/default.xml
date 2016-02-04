@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_JUDIRECTORY_MENU_TREE_DEFAULT_LAYOUT_TITLE">
+        <message>
+            <![CDATA[COM_JUDIRECTORY_MENU_TREE_DEFAULT_LAYOUT_DESC]]>
+        </message>
+    </layout>
+
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request"
+                  addfieldpath="/administrator/components/com_judirectory/models/fields">
+            <field name="id"
+                   type="categorytreepublishtoplevel"
+                   checkpublished="true"
+                   label="COM_JUDIRECTORY_FIELD_CATEGORY_LABEL"
+                   description="COM_JUDIRECTORY_FIELD_CATEGORY_DESC"
+                   required="true"/>
+        </fieldset>
+    </fields>
+
+    <fields name="params">
+        <fieldset name="basic"
+                  label="COM_JUDIRECTORY_BASIC_OPTIONS">
+            <field name="listing_columns"
+                   type="text"
+                   size="10"
+                   default=""
+                   label="COM_JUDIRECTORY_CONFIG_LISTING_COLUMNS_LABEL"
+                   description="COM_JUDIRECTORY_CONFIG_LISTING_COLUMNS_DESC"
+                    />
+
+            <field name="listing_column_class"
+                   type="text"
+                   size="60"
+                   label="COM_JUDIRECTORY_CONFIG_LISTING_COLUMN_CLASS_LABEL"
+                   description="COM_JUDIRECTORY_CONFIG_LISTING_COLUMN_CLASS_DESC"
+                    />
+
+            <field name="listing_row_class"
+                   type="text"
+                   size="60"
+                   label="COM_JUDIRECTORY_CONFIG_LISTING_ROW_CLASS_LABEL"
+                   description="COM_JUDIRECTORY_CONFIG_LISTING_ROW_CLASS_DESC"
+                    />
+        </fieldset>
+    </fields>
+</metadata>

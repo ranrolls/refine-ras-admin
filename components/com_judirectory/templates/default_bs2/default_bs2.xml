@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="template">
+  <name>Default - Bootstrap 2</name>
+  <author>JoomUltra</author>
+  <creationDate>11 Apr 2015</creationDate>
+  <authorEmail>admin@joomultra.com</authorEmail>
+  <version>1.0.5</version>
+  <license>GNU/GPL</license>
+  <authorUrl>http://www.joomultra.com</authorUrl>
+  <description>Default JU Directory template</description>
+  <folder>default_bs2</folder>
+  <information><![CDATA[
+			Default JUDirectory Template(Bootstrap 2)
+		]]></information>
+  <fileset>
+    <files target="components/com_judirectory/templates/default_bs2">
+      <file>default_bs2.xml</file>
+      <file>index.html</file>
+      <file>load_assets.php</file>
+      <file>template_helper.php</file>
+      <file>template_preview.png</file>
+      <file>template_thumbnail.png</file>
+      <folder>advsearch</folder>
+      <folder>assets</folder>
+      <folder>categories</folder>
+      <folder>category</folder>
+      <folder>claim</folder>
+      <folder>collection</folder>
+      <folder>collections</folder>
+      <folder>commenttree</folder>
+      <folder>compare</folder>
+      <folder>contact</folder>
+      <folder>customlist</folder>
+      <folder>dashboard</folder>
+      <folder>embedlisting</folder>
+      <folder>featured</folder>
+      <folder>form</folder>
+      <folder>listall</folder>
+      <folder>listalpha</folder>
+      <folder>listing</folder>
+      <folder>listings</folder>
+      <folder>maintenance</folder>
+      <folder>modcomment</folder>
+      <folder>modcomments</folder>
+      <folder>modlistings</folder>
+      <folder>modpendingcomments</folder>
+      <folder>modpendinglistings</folder>
+      <folder>modpermission</folder>
+      <folder>modpermissions</folder>
+      <folder>profile</folder>
+      <folder>report</folder>
+      <folder>search</folder>
+      <folder>searchby</folder>
+      <folder>subscribe</folder>
+      <folder>tag</folder>
+      <folder>tags</folder>
+      <folder>themes</folder>
+      <folder>topcomments</folder>
+      <folder>toplistings</folder>
+      <folder>tree</folder>
+      <folder>usercomments</folder>
+      <folder>userlistings</folder>
+      <folder>usersubscriptions</folder>
+    </files>
+  </fileset>
+  <languages>
+    <language tag="en-GB" client="administrator">en-GB.com_judirectory_tpl_default_bs2.ini</language>
+  </languages>
+  <config>
+    <fieldset name="advanced">
+      <field name="load_bootstrap" type="list" default="2" label="COM_JUDIRECTORY_TPL_DEFAULT_LOAD_BOOTSTRAP_LABEL" description="COM_JUDIRECTORY_TPL_DEFAULT_LOAD_BOOTSTRAP_DESC">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+        <option value="2">COM_JUDIRECTORY_AUTO</option>
+      </field>
+    </fieldset>
+  </config>
+  <cat_config>
+    </cat_config>
+  <listing_config>
+    </listing_config>
+</extension>

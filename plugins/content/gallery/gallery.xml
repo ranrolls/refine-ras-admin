@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Gallery for K2</name>
+	<author>JLex</author>
+	<creationDate>2014</creationDate>
+	<copyright>Copyright (C) 2013-2014 Joomla-extensions.info. All rights
+		reserved.</copyright>
+	<license>GNU General Public License version 2 or later
+	</license>
+	<authorEmail>joomla.extensions.info@gmail.com</authorEmail>
+	<authorUrl>www.joomla-extensions.info</authorUrl>
+	<version>1.3.0</version>
+	<description><![CDATA[	
+<div id="jlex_introduce" style="width: 430px;">
+<div id="jlex_logo" style="width: 124px; height: 124px; background: url(&quot;http://joomla-extensions.info/i/logo.png&quot;) no-repeat scroll center center rgb(77, 144, 254); float: left; margin-right: 6px;"></div>
+<a target="_blank" href="https://www.facebook.com/jlextension" style="display: block; float: left; height: 60px; line-height: 60px; width: 300px; background-color: rgb(254, 198, 77); text-decoration: none; text-indent: 20px; font-size: 3em;">Facebook</a>
+<a target="_blank" href="http://joomla-extensions.info" style="display: block; float: left; height: 60px; width: 300px; margin-top: 4px; background-color: rgb(254, 198, 77); line-height: 60px; text-decoration: none; text-indent: 20px; font-size: 3em;">Visit our Site</a>
+<div class="clr"></div>
+<h1>Thank you for using our products</h1>
+</div>
+	]]></description>
+	<files>
+		<filename plugin="gallery">gallery.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>cache</folder>
+		<folder>extend</folder>
+		<folder>elements</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_gallery.ini</language>
+		<language tag="en-GB">en-GB.plg_content_gallery.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="themes" type="list" default="1" label="SELECT_THEME"
+					description="">
+					<option value="0">Classic</option>
+					<option value="1">Azur</option>
+					<option value="2">Twelve</option>
+					<option value="3">Folio</option>
+					<option value="4">Miniml</option>
+				</field>
+				<field name="height" type="text" default="133" label="MAX_HEIGHT_CROP" />
+				<field name="width" type="text" default="133" label="MAX_WIDTH_CROP" />
+				<field name="method_resize" type="list" default="fit" label="Method crop" class="btn-group" description="fit:Fits image into width and height while keeping original aspect ratio. Expect your image not to use the full area. crop:Crops image to fill the area while keeping original aspect ratio. Expect your image to get, well, cropped. fill:Fits image into the area without taking care of any ratios. Expect your image to get deformed." >
+					<option value="fit">Fit</option>
+					<option value="crop">Crop</option>
+					<option value="fill">Fill</option>
+				</field>
+				<field name="autoplay" type="radio" default="0" label="AUTOPLAY" class="btn-group" 
+					description="Sets JLEX Galleria to play slidehow when initialized.">
+					<option value="0">JL_NO</option>
+					<option value="1">JL_YES</option>
+				</field>
+				<field name="time" type="text" default="7" label="TIME_AUTOPLAY" />
+				<field name="lightbox" type="radio" default="0" label="Lightbox" class="btn-group">
+					<option value="0">JL_NO</option>
+					<option value="1">JL_YES</option>
+				</field>
+				<field name="imagecrop" type="list" default="1" label="IMAGECROP"
+					description="Defines how JLEX Galleria will crop the image.">
+					<option value="0">True</option>
+					<option value="1">False</option>
+					<option value="2">Height</option>
+					<option value="3">Width</option>
+					<option value="4">Landscape</option>
+					<option value="5">Portrait</option>
+				</field>
+				<field name="showcounter" type="radio" default="1" label="SHOW_COUNTER" class="btn-group" 
+					description="Toggles the counter.">
+					<option value="0">JL_NO</option>
+					<option value="1">JL_YES</option>
+				</field>
+				<field name="imagetran" type="list" default="1" label="IMAGETRANSITION"
+					description="The transition that is used when displaying the images.">
+					<option value="0">Fade</option>
+					<option value="1">Flash</option>
+					<option value="2">Pulse</option>
+					<option value="3">Slide</option>
+					<option value="4">Fadeslide</option>
+				</field>
+				<field name="truefullscreen" type="radio" default="1"
+					label="ENABLE_FULLSCREEN" class="btn-group" 
+					description="JLEX Galleria supports true fullscreen mode if it is supported by the browser (currently FF10+, Safari 5.1+ and Chrome 15+). That means that it will enter a native OS fullscreen if the fullscreen method is triggered.">
+					<option value="0">JL_NO</option>
+					<option value="1">JL_YES</option>
+				</field>
+				<field name="showimagenav" type="radio" default="1" label="IMAGE_NAV" class="btn-group" 
+					description="Set this to false if you do not wish to display the image navigation (next/prev arrows).">
+					<option value="0">JL_NO</option>
+					<option value="1">JL_YES</option>
+				</field>
+
+				<field name="maxpicasa" type="text" default="30" label="MAXLOADPICASA"
+					description="Maximum number of photos to return (maximum value 100)" />
+				<field name="sizeimgpicasa" type="list" default="2"
+					label="SIZEIMGPICASA" description="The size to fetch for the main image.">
+					<option value="0">Small 75x75</option>
+					<option value="1">Thumb 100xAuto</option>
+					<option value="2">Medium 640xAuto</option>
+					<option value="3">Big 1024xAuto</option>
+					<option value="4">Original</option>
+				</field>
+				<field name="sizeimgthumbpicasa" type="list" default="1"
+					label="SIZEIMGTHUMBPICASA" description="The size to fetch for the thumbnail image.">
+					<option value="0">Small 75x75</option>
+					<option value="1">Thumb 100xAuto</option>
+					<option value="2">Medium 640xAuto</option>
+					<option value="3">Big 1024xAuto</option>
+					<option value="4">Original</option>
+				</field>
+
+				<field name="maxflickr" type="text" default="30" label="MAXLOADFLICKR"
+					description="Maximum number of photos to return (maximum value 100)" />
+				<field name="sizeimgflickr" type="list" default="2"
+					label="SIZEIMGFLICKR" description="The size to fetch for the main image.">
+					<option value="0">Small 75x75</option>
+					<option value="1">Thumb 100xAuto</option>
+					<option value="2">Medium 640xAuto</option>
+					<option value="3">Big 1024xAuto</option>
+					<option value="4">Original</option>
+				</field>
+				<field name="sizeimgthumbflickr" type="list" default="1"
+					label="SIZEIMGTHUMBFLICKR" description="The size to fetch for the thumbnail image.">
+					<option value="0">Small 75x75</option>
+					<option value="1">Thumb 100xAuto</option>
+					<option value="2">Medium 640xAuto</option>
+					<option value="3">Big 1024xAuto</option>
+					<option value="4">Original</option>
+				</field>
+			</fieldset>
+			<fieldset name="about" addfieldpath="/plugins/content/gallery/elements">
+				<field name="followus_ws" type="asset" element="link" label="Website" value="http://jlexart.com" />
+				<field name="followus_ws" type="asset" element="link" label="Go to Pro" value="http://jlexart.com/extensions/gallery-anywhere" />
+				<field name="followus_fb" type="asset" element="fb" label="Facebook" />
+				<field name="followus_jed" type="asset" element="link" label="Extension in JED" value="http://extensions.joomla.org/extensions/extension-specific/k2-extensions/24293" />
+				<field type="donate" hidden="true" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

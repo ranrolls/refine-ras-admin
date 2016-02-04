@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Link</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>link</folder>
+    <core>0</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/link">
+            <file>link.xml</file>
+            <file>link.php</file>
+            <file>index.html</file>
+            <folder>tmpl</folder>
+        </files>
+    </fileset>
+    <config>
+        <field
+                name="link_text"
+                type="text"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_LINK_TEXT_LABEL"
+                description="COM_JUDIRECTORY_FIELD_LINK_TEXT_DESC"
+                />
+
+        <field
+                name="trim_long_url"
+                type="text"
+                default="0"
+                label="COM_JUDIRECTORY_FIELD_TRIM_LONG_URL_LABEL"
+                description="COM_JUDIRECTORY_FIELD_TRIM_LONG_URL_DESC"
+                />
+
+        <field
+                name="front_portion_url"
+                type="text"
+                default="0"
+                label="COM_JUDIRECTORY_FIELD_FRONT_PORTION_URL_LABEL"
+                description="COM_JUDIRECTORY_FIELD_FRONT_PORTION_URL_DESC"
+                />
+
+        <field
+                name="back_portion_url"
+                type="text"
+                default="0"
+                label="COM_JUDIRECTORY_FIELD_BACK_PORTION_URL_LABEL"
+                description="COM_JUDIRECTORY_FIELD_BACK_PORTION_URL_DESC"
+                />
+
+        <field
+                name="strip_http"
+                type="radio"
+                default="1"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_STRIP_HTTP_LABEL"
+                description="COM_JUDIRECTORY_FIELD_STRIP_HTTP_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="open_in"
+                type="list"
+                default="_blank"
+                label="COM_JUDIRECTORY_FIELD_OPEN_IN_LABEL"
+                description="COM_JUDIRECTORY_FIELD_OPEN_IN_DESC"
+                >
+            <option value="_self">COM_JUDIRECTORY_SAME_WINDOW</option>
+            <option value="_blank">COM_JUDIRECTORY_NEW_WINDOW</option>
+            <option value="popup">COM_JUDIRECTORY_POPUP</option>
+            <option value="lightbox">COM_JUDIRECTORY_LIGHTBOX_POPUP</option>
+        </field>
+
+        <field name="popup_width"
+               type="text"
+               default="800"
+               label="COM_JUDIRECTORY_FIELD_POPUP_WIDTH_LABEL"
+               description="COM_JUDIRECTORY_FIELD_POPUP_WIDTH_DESC"
+                />
+
+        <field name="popup_height"
+               type="text"
+               default="500"
+               label="COM_JUDIRECTORY_FIELD_POPUP_HEIGHT_LABEL"
+               description="COM_JUDIRECTORY_FIELD_POPUP_HEIGHT_DESC"
+                />
+
+        <field
+                name="show_go_button"
+                type="radio"
+                default="1"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_SHOW_GO_BUTTON_LABEL"
+                description="COM_JUDIRECTORY_FIELD_SHOW_GO_BUTTON_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="use_nofollow"
+                type="radio"
+                default="1"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_USE_NOFOLLOW_LABEL"
+                description="COM_JUDIRECTORY_FIELD_USE_NOFOLLOW_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="regex"
+                type="text"
+                default="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6}).*$/i"
+                label="COM_JUDIRECTORY_FIELD_REGEX_LABEL"
+                description="COM_JUDIRECTORY_FIELD_REGEX_DESC"
+                />
+
+        <field
+                name="invalid_message"
+                type="text"
+                default=""
+                label="COM_JUDIRECTORY_FIELD_INVALID_MESSAGE_LABEL"
+                description="COM_JUDIRECTORY_FIELD_INVALID_MESSAGE_DESC"
+                />
+
+        <field name="size"
+               type="text"
+               default="32"
+               label="COM_JUDIRECTORY_FIELD_SIZE_LABEL"
+               description="COM_JUDIRECTORY_FIELD_SIZE_DESC"
+                />
+
+        <field name="placeholder"
+               type="text"
+               default=""
+               label="COM_JUDIRECTORY_FIELD_PLACEHOLDER_LABEL"
+               description="COM_JUDIRECTORY_FIELD_PLACEHOLDER_DESC"
+                />
+
+        <field
+                name="link_counter"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_LINK_COUNTER_LABEL"
+                description="COM_JUDIRECTORY_FIELD_LINK_COUNTER_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="show_link_counter_input"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_SHOW_LINK_COUNTER_IN_INPUT_FORM_LABEL"
+                description="COM_JUDIRECTORY_FIELD_SHOW_LINK_COUNTER_IN_INPUT_FORM_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="show_link_counter_output"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_SHOW_LINK_COUNTER_IN_OUTPUT_HTML_LABEL"
+                description="COM_JUDIRECTORY_FIELD_SHOW_LINK_COUNTER_IN_OUTPUT_HTML_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </config>
+</extension>

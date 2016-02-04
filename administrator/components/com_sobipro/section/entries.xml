@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @version: $Id: entries.xml 4387 2015-02-19 12:24:35Z Radek Suski $
+ @package: SobiPro Component for Joomla!
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: http://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2015 Sigsiu.NET GmbH (http://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See http://www.gnu.org/licenses/gpl.html and http://sobipro.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ $Date: 2015-02-19 13:24:35 +0100 (Thu, 19 Feb 2015) $
+ $Revision: 4387 $
+ $Author: Radek Suski $
+ File location: administrator/components/com_sobipro/section/entries.xml $
+-->
+
+<definition>
+	<header>
+		<title value="SECTION_ALL_ENTRIES_TITLE" />
+		<file type="script" filename="bootstrap.bootbox" />
+		<file type="script" filename="adm.rejection" />
+	</header>
+	<toolbar title="var:[site_title]" icon="SobiSection">
+		<divider />
+		<buttons type="actions">
+			<button type="url" sid="true" task="entry.add" label="AMN.ADD_ENTRY" icon="file-text" />
+			<button type="delete" task="entry.delete" confirm="TB.JS_DELETE_ENTRIES_WARN" />
+			<nav-header label="TB.PUBLISHING" />
+			<button type="publish" task="entry.publish" />
+			<button type="hide" task="entry.hide" />
+			<nav-header label="TB.APPROVAL" />
+			<button type="approve" task="entry.approve" />
+			<button type="revoke" task="entry.unapprove" />
+		</buttons>
+		<divider />
+		<buttons icon="sitemap" buttons="sections-list" label="TB.SECTIONS" />
+		<divider />
+		<buttons type="options" dropdown-class="pull-right">
+			<button type="url" task="panel" />
+			<button type="url" task="config" />
+			<button type="url" task="acl" />
+			<button type="url" task="extensions.installed" />
+			<button type="url" task="template.info" />
+			<button type="help" target="_blank" />
+		</buttons>
+	</toolbar>
+	<body>
+		<div class="row-fluid">
+			<div class="span2" id="SPRightMenu">
+				<menu />
+			</div>
+			<div class="span10">
+				<message id="spMessage" />
+				<div class="row-fluid">
+					<div class="hide" id="SpProgress">
+						<div>
+							<message type="info" label="" class="smallmessage" />
+						</div>
+						<div class="progress progress-striped active" id="SpProgress">
+							<div class="bar" style="width: 0%;"></div>
+						</div>
+					</div>
+				</div>
+				<header label="CAT.ENTRIES_LIST_HEAD" icon="SobiEntries">
+					<div class="btn-group pull-right" id="spEntriesFilterHead">
+						<field type="text" name="sp_entries_filter" id="spEntriesFilter" value="filter" placeholder="FILTER" class="input-large spSubmit" />
+						<field type="select" name="eorder" selected="ordering" values="entriesOrdering" class="input-large spOrdering" />
+						<field type="select" name="elimit" selected="entries-limit" class="input-mini spOrdering">
+							<values>
+								<values label="LISTING_LIMIT" />
+								<option value="5" />
+								<option value="15" />
+								<option value="25" />
+								<option value="50" />
+								<option value="100" />
+							</values>
+						</field>
+						<field type="button" name="save-ordering" icon="save" class="btn ctrl-default-ordering" data-target="entries" />
+					</div>
+				</header>
+				<table>
+					<head>
+						<cell label="HEADER_ID" type="text" class="SpCellCenter" />
+						<cell type="checkbox" rel="e_sid" class="SpCellCenter" />
+						<cell label="HEADER_ENTRIES_NAME" type="text" />
+						<cells value="customHeader" class="SpCellCenter" type="text" />
+						<cell label="HEADER_ENTRIES_STATE" type="text" class="SpCellCenter" />
+						<cell label="HEADER_ENTRIES_APPROVAL" type="text" class="SpCellCenter" />
+						<cell label="HEADER_FIELD_AUTHOR" type="text" class="SpCellCenter" />
+                        <cell label="HEADER_ENTRIES_REJECT" type="text" class="SpCellCenter" />
+					</head>
+					<loop subject="entries">
+						<cell type="text" value="id" class="SpCellCenter" />
+						<cell type="checkbox" name="e_sid" value="id" class="SpCellCenter" checked-out-time="coutTime" checked-out-by="cout" />
+						<cell>
+							<cell type="link" value="name" class="var:[valid] entry-name">
+								<url type="intern">
+									<param name="task" value="entry.edit" />
+									<param name="sid" value="id" parse="true" />
+									<param name="pid" value="request.pid" parse="true" subject="skip" />
+								</url>
+							</cell>
+						</cell>
+						<!--<cell type="text" value="field_price"/>-->
+						<cells value="customFields" class="SpCellCenter" />
+						<cell type="ticker" value="state" class="SpCellCenter" icons="{'0':'remove-sign','1':'ok'}" valid-since="validSince" valid-until="validUntil">
+							<url type="intern">
+								<param name="task" value="entry.toggle.enabled" />
+								<param name="sid" value="id" parse="true" />
+							</url>
+						</cell>
+						<cell type="ticker" value="approved" class="SpCellCenter" icons="{'0':'thumbs-down-alt','1':'thumbs-up-alt'}">
+							<url type="intern">
+								<param name="task" value="entry.toggle.approval" />
+								<param name="sid" value="id" parse="true" />
+							</url>
+						</cell>
+						<cell type="text" value="owner" class="SpCellCenter" />
+                        <cell type="ticker" value="state" class="SpCellCenter" icons="{'0':'undo','1':'undo'}">
+                            <url type="intern" class="btn btn-mini ctrl-entry-reject">
+                                <param name="task" value="entry.edit" />
+                                <param name="sid" value="id" parse="true" />
+                            </url>
+                        </cell>
+					</loop>
+				</table>
+				<pagination set="eSite" class="pagination pagination-centered pagination-toolbar" inputbox="right" type="ICON">
+					<param name="count" value="entries-count" parse="true" />
+					<param name="limit" value="entries-limit" parse="true" />
+					<param name="current" value="entries-site" parse="true" />
+					<param name="url">
+						<param name="option" value="com_sobipro" />
+						<param name="task" value="section.entries" />
+						<param name="pid" value="request.pid" parse="true" />
+						<param name="eSite" value="" />
+					</param>
+				</pagination>
+			</div>
+		</div>
+		<div class="modal hide" id="reject-entry-window" style="width:700px">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&amp;times;</button>
+				<h3>
+					<text value="ENTRY_REJECT" />
+				</h3>
+			</div>
+			<div class="modal-body">
+				<fieldset >
+					<field type="select" name="template"  label="ENTRY_REJECT_TPLS" class="input-large" />
+					<field type="textarea" name="reason" label="ENTRY_REJECT_REASON" editor="false" class="input-splarge" rows="10" style="" />
+					<field type="toggle" name="trigger.unpublish" value="1" label="ENTRY_REJECT_TRIGGER_UNPUBLISH" prefix="yes_no" />
+					<field type="toggle" name="trigger.unapprove" label="ENTRY_REJECT_TRIGGER_UNAPPROVE" prefix="yes_no" />
+					<field type="toggle" name="unpublish" value="0" label="ENTRY_REJECT_UNPUBLISH" prefix="yes_no" />
+					<field type="toggle" name="discard" value="0" label="ENTRY_REJECT_DISCARD" prefix="yes_no" />
+					<field type="token"/>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-success pull-left ctrl-save-tpl">
+					<text value="ENTRY_REJECT_SAVE_TPL" />
+				</a>
+				<a href="#" class="btn" data-dismiss="modal">
+					<text value="CLOSE" />
+				</a>
+				<a href="#" class="btn btn-primary ctrl-reject" >
+					<text value="ENTRY_REJECT" />
+				</a>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php" />
+		<hidden>
+			<field name="option" default="com_sobipro" />
+			<field name="task" default="section.entries" />
+		</hidden>
+	</config>
+</definition>

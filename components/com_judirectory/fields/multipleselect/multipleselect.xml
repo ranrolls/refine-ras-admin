@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Multiple Select</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>multipleselect</folder>
+    <core>0</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/multipleselect">
+            <file>multipleselect.xml</file>
+            <file>multipleselect.php</file>
+            <file>multipleselect.css</file>
+            <file>multipleselect.js</file>
+            <file>index.html</file>
+            <folder>tmpl</folder>
+            <folder>images</folder>
+        </files>
+    </fileset>
+    <config>
+        <field name="size"
+               type="text"
+               label="COM_JUDIRECTORY_FIELD_SIZE_LABEL"
+               description="COM_JUDIRECTORY_FIELD_SIZE_DESC"
+               default="5"
+                />
+
+        <field
+                name="tag_search"
+                type="radio"
+                default="0"
+                class="btn-group"
+                label="COM_JUDIRECTORY_FIELD_TAG_SEARCH_LABEL"
+                description="COM_JUDIRECTORY_FIELD_TAG_SEARCH_DESC"
+                >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="search_operator"
+                type="list"
+                default="OR"
+                label="COM_JUDIRECTORY_FIELD_SEARCH_OPERATOR_LABEL"
+                description="COM_JUDIRECTORY_FIELD_SEARCH_OPERATOR_DESC"
+                >
+            <option value="OR">COM_JUDIRECTORY_MATCH_ANY</option>
+            <option value="AND">COM_JUDIRECTORY_MATCH_ALL</option>
+        </field>
+    </config>
+</extension>

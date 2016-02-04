@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judlplugintype="field">
+    <name>Core Alias</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>core_alias</folder>
+    <core>1</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/core_alias">
+            <file>core_alias.xml</file>
+            <file>core_alias.php</file>
+            <file>index.html</file>
+        </files>
+    </fileset>
+    <config>
+        <field name="image_display_mode"
+               type="list"
+               default="fancybox"
+               class="btn-group"
+               label="COM_JUDIRECTORY_FIELD_IMAGE_DISPLAY_MODE_LABEL"
+               description="COM_JUDIRECTORY_FIELD_IMAGE_DISPLAY_MODE_DESC">
+            <option value="fancybox">Fancybox</option>
+            <option value="camera_slideshow">Camera slideshow</option>
+        </field>
+    </config>
+</extension>

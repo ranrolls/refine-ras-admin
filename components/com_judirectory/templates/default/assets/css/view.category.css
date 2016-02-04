@@ -1,0 +1,185 @@
+.judir-cat-info .cat-image {
+	float: left;
+	margin: 0 15px 15px 0;
+	overflow: hidden;
+}
+
+.judir-cat-info .cat-title {
+	margin-top: 0; color: hsl(220, 66%, 38%);
+	margin-bottom: 10px;
+}
+.judir-listing-details .listing-title  span{color: hsl(220, 66%, 38%); font-size:24px;	}
+
+
+.judir-cat-info h2.cat-title {font-size: 24px;}
+.subcat-item  .cat-title    > a{ font-size: 18px;    font-weight: normal;}
+
+p.p_cat:hover{color:#ff9100;}
+.judir-relcat .relcat-item {
+	overflow : hidden;
+}
+
+.judir-relcat .relcat-item .cat-image {
+	float: left;
+	margin: 0 15px 15px 0;
+	overflow: hidden;
+}
+
+.judir-relcat .cat-title {
+	font-size: 125%;
+	margin-top: 0 !important;
+	margin-bottom: 10px;
+}
+
+.judir-relcat .cat-title small {
+	font-size: 75%;
+}
+
+.judir-subcat .subcat-item {
+	overflow : hidden;
+}
+
+.judir-subcat .subcat-item .cat-image {
+	float: left;
+	margin: 0 15px 15px 0;
+	overflow: hidden;
+}
+
+.judir-subcat .cat-title {
+	font-size: 125%;
+	margin-top: 0 !important;
+	margin-bottom: 10px;
+}
+
+.judir-subcat .cat-title small {
+	font-size: 75%;
+}
+
+/*
+ *	Category list view
+ */
+.judir-form-listings .sort-pagination select {
+    float: left;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: 5px;
+    width: auto;
+}
+
+.judir-listing-list-table table {
+	margin-top: 10px;
+	clear   : both;
+}
+
+.judir-listing-list-table table .listing-title {
+	font-size: 125% !important;
+	line-height: 1.2 !important;
+	margin: 5px 0 0 !important;
+	text-align: left !important;
+}
+
+.judir-listing-list-table table td.title .title-wrapper {
+    position: relative;
+}
+
+.judir-listing-list-table table .judir-listing .private-actions {
+    opacity: 0;
+    transition:all 0.2s ease 0.1s;
+    -webkit-transition:all 0.2s ease 0.1s;
+    -moz-transition:all 0.2s ease 0.1s;
+    -o-transition:all 0.2s ease 0.1s;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.judir-listing-list-table table .judir-listing:hover .private-actions, .judir-listing .private-actions.open {
+    opacity: 1;
+}
+
+
+.infoBox{
+	margin-top: -160px;
+}
+
+.marker-holder {
+	position: relative;
+	left: 0;
+	width: 10px;
+	height: 120px;
+}
+
+.marker-content {
+	width: 280px;
+	position: absolute;
+	bottom: 0;
+	background: #ffffff;
+	border: 4px solid #ffffff;
+	box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.4),0 0 0 1px rgba(0,0,0,0.25) inset;
+}
+
+.marker-content img {
+	float: right;
+	padding: 1px;
+}
+
+.with-image .map-item-info {
+	width: 170px;
+}
+
+.map-item-info {
+	padding: 10px 14px;
+}
+
+.map-item-info .title {
+	color: #333333;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.map-item-info .address {
+	margin-bottom: 5px;
+	font-style: italic;
+}
+
+.map-item-info .more-button {
+	cursor: pointer;
+	background: #73ac4b;
+	background: -moz-linear-gradient(#73ac4b,#6ca146);
+	background: -o-linear-gradient(#73ac4b,#6ca146);
+	background: -webkit-gradient(linear,0% 0%,0% 100%,from(#73ac4b),to(#6ca146));
+	background: -webkit-linear-gradient(#73ac4b,#6ca146);
+	border: 1px solid #679a43;
+	box-shadow: 0 1px 0 #88bc64 inset;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 3px 10px;
+	text-shadow: 1px 1px 0 #527a35;
+	text-decoration: none;
+}
+
+.marker-content .arrow {
+	background: url('../../../../assets/img/map-pin-description.png') no-repeat;
+	bottom: -21px;
+	left: 28px;
+	height: 22px;
+	position: absolute;
+	width: 37px;
+}
+
+.infoBox > img {
+	background: #ffffff url('../../../../assets/img/pop_up-close.png') no-repeat center;
+	border-radius: 10px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.8);
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	height: 12px;
+	width: 12px;
+	margin: auto;
+	padding: 2px;
+	cursor: pointer;
+	z-index: 1000;
+}

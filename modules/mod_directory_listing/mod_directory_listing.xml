@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6" method="upgrade">
+	<name>Directory_listing</name>
+	<creationDate>2015-04-20</creationDate>
+	<author></author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright (C) 2015  Open Source Matters. All rights reserved.</copyright>	
+	<license></license>
+	<version>1.0</version>
+	<description>Category wise listing.</description>
+	<files>
+		<filename module="mod_directory_listing">mod_directory_listing.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_directory_listing.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_directory_listing.ini</language>
+    	<language tag="de-DE">language/de-DE.mod_directory_listing.ini</language>            
+	</languages>
+	<params>
+		<param name="classname" type="text" default="" label="Class Name" description="Class Name Description" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="classname" type="text" default="" label="Class Name" description="Class Name Description" />
+			</fieldset>
+		</fields>
+	</config>			
+</extension>

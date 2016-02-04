@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" method="upgrade" judirplugintype="field">
+    <name>Core Image</name>
+    <author>JoomUltra</author>
+    <creationDate>18 July 2014</creationDate>
+    <authorEmail>admin@joomultra.com</authorEmail>
+    <version>1.0</version>
+    <license>GNU/GPL</license>
+    <website>http://www.joomultra.com</website>
+    <description></description>
+    <folder>core_image</folder>
+    <core>1</core>
+    <default>1</default>
+    <fileset>
+        <files target="components/com_judirectory/fields/core_image">
+            <file>core_image.xml</file>
+            <file>core_image.php</file>
+            <file>index.html</file>
+            <folder>tmpl</folder>
+        </files>
+    </fileset>
+    <config>
+        <field name="list_view_set_image_dimension"
+               type="radio"
+               default="1"
+               class="btn-group"
+               label="COM_JUDIRECTORY_FIELD_LIST_VIEW_SET_IMAGE_LISTING_DIMENSION_LABEL"
+               description="COM_JUDIRECTORY_FIELD_LIST_VIEW_SET_IMAGE_LISTING_DIMENSION_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="list_view_image_width"
+               type="text"
+               default="100"
+               label="COM_JUDIRECTORY_FIELD_LIST_VIEW_IMAGE_LISTING_WIDTH_LABEL"
+               description="COM_JUDIRECTORY_FIELD_LIST_VIEW_IMAGE_LISTING_WIDTH_DESC"
+                />
+
+        <field name="list_view_image_height"
+               type="text"
+               default="100"
+               label="COM_JUDIRECTORY_FIELD_LIST_VIEW_IMAGE_LISTING_HEIGHT_LABEL"
+               description="COM_JUDIRECTORY_FIELD_LIST_VIEW_IMAGE_LISTING_HEIGHT_DESC"
+                />
+
+        <field name="details_view_set_image_dimension"
+               type="radio"
+               default="1"
+               class="btn-group"
+               label="COM_JUDIRECTORY_FIELD_DETAILS_VIEW_SET_IMAGE_LISTING_DIMENSION_LABEL"
+               description="COM_JUDIRECTORY_FIELD_DETAILS_VIEW_SET_IMAGE_LISTING_DIMENSION_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="details_view_image_width"
+               type="text"
+               default="100"
+               label="COM_JUDIRECTORY_FIELD_DETAILS_VIEW_IMAGE_LISTING_WIDTH_LABEL"
+               description="COM_JUDIRECTORY_FIELD_DETAILS_VIEW_IMAGE_LISTING_WIDTH_DESC"
+                />
+
+        <field name="details_view_image_height"
+               type="text"
+               default="100"
+               label="COM_JUDIRECTORY_FIELD_DETAILS_VIEW_IMAGE_LISTING_WIDTH_LABEL"
+               description="COM_JUDIRECTORY_FIELD_DETAILS_VIEW_IMAGE_LISTING_WIDTH_DESC"
+                />
+    </config>
+</extension>
